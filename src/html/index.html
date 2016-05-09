@@ -1,7 +1,5 @@
 {% extends 'layouts/application.html' %}
 
-{% set title = "Avengers Academy Event Tracker - Civil War" %}
-
 {% block content %}
 
   {% include 'shared/header.html' %}
@@ -11,7 +9,7 @@
       <section class="wrap">
         <p>Special thanks to <a href="https://reddit.com/user/umbraetmors" target="_blank">/u/umbraetmors</a>, <a href="https://www.reddit.com/user/SunGodKizaru" target="_blank">/u/SunGodKizaru</a>, and <a href="https://www.reddit.com/user/fairyshade" target="_blank">/u/fairyshade</a> for <a href="https://www.reddit.com/r/avengersacademygame/search?q=flair_text%3A%27Datamining%27&sort=new&restrict_sr=on&t=all" target="_blank">their frequent Datamining posts</a>. Its all very appreciated!</p>
         <p>Please feel free to <a href="https://github.com/getignited/avengersacademy-tracker/issues" target="_blank">drop me a line</a> with any feature requests or issues. The Event Tracker is still very much a work in progress to hopefully become a useful tool for the community.</p>
-        <p><small>Avengers Academy Event Tracker (v0.1.0) has been assembled by <a href="https://www.reddit.com/user/getignited" target="_blank">/u/getignited</a>.</small></p>
+        <p><small>Avengers Academy Event Tracker {% block version %}{{ version }}{% endblock %} has been assembled by <a href="https://www.reddit.com/user/getignited" target="_blank">/u/getignited</a>.</small></p>
       </section>
     </div>
   </div>
@@ -50,6 +48,17 @@
       <section class="wrap wrap__tracker wrap--fixed">
         <h2>Buildings</h2>
         <div id="buildingTracker">
+          <section class="table__row table--head">
+            <div class="table__col table__col--xs">Got it</div>
+            <div class="table__col table__col--md">Name</div>
+            <div class="table__col table__col--lg">Materials</div>
+          </section>
+        </div>
+      </section>
+
+      <section class="wrap wrap__tracker wrap--fixed">
+        <h2>Challenges</h2>
+        <div id="challengeTracker">
           <section class="table__row table--head">
             <div class="table__col table__col--xs">Got it</div>
             <div class="table__col table__col--md">Name</div>

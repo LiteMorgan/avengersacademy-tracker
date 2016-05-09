@@ -88,5 +88,15 @@
       ],
       "premium": false
     }
+  ],
+  "challenges": [
+    {
+      "name": "Black Panther Bobblehead",
+      "frag": "blackpantherbobble",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 80 }
+      ],
+      "premium": false
+    }
   ]
 }
