@@ -94,7 +94,7 @@
       "name": "Black Panther Bobblehead",
       "frag": "blackpantherbobble",
       "mats": [
-        { "item": "Vibranium", "frag": "currency", "req": 80 }
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 80 }
       ],
       "premium": false
     }
