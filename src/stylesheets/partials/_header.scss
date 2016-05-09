@@ -1,0 +1,7 @@
+.header {
+
+  &__content {
+    @include make-col();
+    @include make-col-span(12);
+  }
+}

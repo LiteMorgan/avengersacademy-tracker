@@ -1,0 +1,20 @@
+.alert {
+  padding: $alert-padding;
+  margin: $spacing-md $spacing-md $spacing-base;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+  background-color: $brand-event-light;
+  color: $brand-event-color;
+  text-align: center;
+  box-shadow: 0px 2px 0 1.5px $brand-primary-dark, 0px -.5px 0 1.5px $brand-primary-dark;
+    
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+  > p + p {
+    margin-top: 5px;
+  }
+}

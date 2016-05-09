@@ -1,0 +1,9 @@
+.item {
+
+  &__req {
+    display: inline-block;
+    margin-right: $font-base / 3;
+    color: $brand-primary;
+    text-align: left;
+  }
+}

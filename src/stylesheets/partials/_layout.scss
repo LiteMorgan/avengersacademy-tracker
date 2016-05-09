@@ -1,0 +1,64 @@
+html {
+  font-size: $font-base;
+}
+
+body {
+  font-family: $font-family-base;
+}
+
+.wrap {
+  position: static;
+  display: block;
+  @include make-col();
+  @include make-col-span(12);
+
+  &__tracker {
+    padding-top: $spacing-base;
+    padding-bottom: $spacing-base;
+  }
+
+  &--fixed {
+    max-width: 992px;
+    margin: 0 auto;
+    float: none;
+  }
+
+  &--flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
+
+.header {
+  position: static;
+  display: block;
+  height: 60vh;
+  margin: 0;
+  background: white;
+}
+
+.container {
+  @include make-container();
+  max-width: 992px;
+  margin-bottom: $spacing-base;
+
+  &__fluid {
+    @include make-container();
+    max-width: 100%;
+
+    &--event {
+      padding: $spacing-md $spacing-base;
+      background-color: $brand-event-dark;
+      color: $brand-event-color;
+      @include gradient-horizontal-three-colors($brand-event-dark, 
+                                                lighten($brand-event-dark, 20%),
+                                                50%,
+                                                $brand-event-dark);
+    }
+  }
+}
+
+.row {
+  @include make-row();
+}

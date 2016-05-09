@@ -1,0 +1,92 @@
+{
+  "characters": [
+    {
+      "name": "Black Panther",
+      "frag": "blackpanther1",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 21 },
+        { "item": "Kimoyo Cards", "frag": "kimoyocards", "req": 8 },
+        { "item": "NYC Maps", "frag": "nycmaps", "req": 15 },
+        { "item": "Vibranium", "frag": "currency", "req": 3828 }
+      ],
+      "premium": false
+    }, {
+      "name": "Black Panther Rank 2",
+      "frag": "blackpanther2",
+      "rank": "Rank 2",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 20 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 20 },
+        { "item": "Vibranium", "frag": "currency", "req": 9102 }
+      ],
+      "premium": false
+    }, {
+      "name": "Wonder Man",
+      "frag": "wonderman1",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Shards", "frag": "shards", "req": 495 }
+      ],
+      "premium": true
+    }, {
+      "name": "Wonder Man Rank 2",
+      "frag": "wonderman2",
+      "rank": "Rank 2",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 20 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 20 },
+        { "item": "Vibranium", "frag": "currency", "req": 9832 }
+      ],
+      "premium": true
+    }
+  ],
+  "costumes": [
+    {
+      "name": "Iron Widow",
+      "frag": "ironwidow",
+      "premium": false,
+      "mats": [
+        { "item": "Spy Cameras", "frag": "spycameras", "req": 8 },
+        { "item": "Widow Stars", "frag": "widowstars", "req": 6 },
+        { "item": "Smoke Bombs", "frag": "smokebombs", "req": 5 },
+        { "item": "Cloaking Devices", "frag": "cloakingdevices", "req": 3 },
+        { "item": "Vibranium", "frag": "currency", "req": 2408 }
+      ]
+    }
+  ],
+  "buildings": [
+    {
+      "name": "#TeamIronMan Poster",
+      "frag": "ironmanposter1",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 592 }
+      ],
+      "premium": false
+    }, {
+      "name": "Wakandan Embassy",
+      "frag": "wakandanembassy1",
+      "rank": "Rank 1",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 6 },
+        { "item": "Heart-Shaped Herb", "frag": "heartshapedherb", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 972 }
+      ],
+      "premium": false
+    }, {
+      "name": "Black Panther Statue",
+      "frag": "blackpantherstatue",
+      "rank": "Rank 1",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 10 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 11 },
+        { "item": "Vibranium", "frag": "currency", "req": 1840 }
+      ],
+      "premium": false
+    }
+  ]
+}

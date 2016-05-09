@@ -1,0 +1,54 @@
+.footer {
+  margin-top: $spacing-md;
+
+  &__content {
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+    background-color: $brand-primary-dark;
+    color: $brand-primary-light;
+
+    &--alt {
+      padding-top: $spacing-base;
+      padding-bottom: $spacing-base;
+      background-color: $brand-event-dark;
+
+      & .wrap--fixed { 
+        display: table;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    @include make-col();
+    @include make-col-span(8);
+
+    @include media-breakpoint-down(sm) {
+      @include make-col-offset(2);
+
+      &:first-child { margin-bottom: $spacing-md; }
+    }
+
+    @include media-breakpoint-up(md){
+      @include make-col-span(3);
+      @include make-col-offset(2);
+    }
+
+    img { width: 100%; height: auto;}
+  }
+
+  &__logobreak {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    color: $brand-event;
+    font-size: 2rem;
+    font-weight: $font-weight-heavy;
+    line-height: 1;
+    @include media-breakpoint-up(md){
+      font-size: 3em;
+    }
+  }
+}
