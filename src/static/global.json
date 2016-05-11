@@ -22,6 +22,17 @@
       ],
       "premium": false
     }, {
+      "name": "Black Panther Rank 3",
+      "frag": "blackpanther3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 54 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 32 },
+        { "item": "???", "frag": "unknown", "req": 25 },
+        { "item": "Vibranium", "frag": "currency", "req": 10375 }
+      ],
+      "premium": false
+    }, {
       "name": "Wonder Man",
       "frag": "wonderman1",
       "rank": "Rank 1",
@@ -37,6 +48,25 @@
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 20 },
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 20 },
         { "item": "Vibranium", "frag": "currency", "req": 9832 }
+      ],
+      "premium": true
+    }, {
+      "name": "Wonder Man Rank 3",
+      "frag": "wonderman3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Headshots", "frag": "headshots", "req": 30 },
+        { "item": "Acting Awards", "frag": "actingawards", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 3012 }
+      ],
+      "premium": true
+    }, {
+      "name": "Wonder Man Rank 4",
+      "frag": "wonderman4",
+      "rank": "Rank 4",
+      "mats": [
+        { "item": "Avengers Identicards", "frag": "identicards", "req": 30 },
+        { "item": "Vibranium", "frag": "currency", "req": 4502 }
       ],
       "premium": true
     }
@@ -80,10 +110,19 @@
       "name": "Black Panther Statue",
       "frag": "blackpantherstatue",
       "rank": "Rank 1",
-      "buildtime": "4 hours",
+      "buildtime": "3 seconds",
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 10 },
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 11 },
+        { "item": "Vibranium", "frag": "currency", "req": 1840 }
+      ],
+      "premium": false
+    }, {
+      "name": "Wakandan Royal Standard",
+      "frag": "wakandanroyalstandard",
+      "rank": "Rank 1",
+      "buildtime": "4 hours",
+      "mats": [
         { "item": "Vibranium", "frag": "currency", "req": 1840 }
       ],
       "premium": false
