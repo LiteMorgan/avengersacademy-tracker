@@ -1,7 +1,6 @@
 const underscore = require('underscore');
 global._ = underscore
 
-
 // getJSON Function
 function get(url) {
   // Return a new promise.
@@ -94,6 +93,7 @@ getJSON('/global.json').then(function(data){
   finishedItems();
   itemTotals();
   zeroItems();
+  premiumToggle();
 });
 
 // Build Tracker
@@ -193,12 +193,11 @@ function itemTotals(){
 
     rows.each(function(){
       
-
       var ele = $(this),
           rowComplete = ele.hasClass('table__row--completed'),
           mats = ele.find('.item__req[data-item="' + frag + '"]');
 
-      if(rowComplete){
+      if( rowComplete || ele.hasClass('table--hidden') ){
 
       } else {
         sum += Number( mats.text() );
@@ -259,3 +258,19 @@ function storageUpd(itemID, got){
   }
   localStorage.setItem('aaCivilWar', JSON.stringify(storageObj));
 }
+
+
+function premiumToggle(){
+  var premiumInput = $('input#premiumToggle');
+
+  premiumInput.on('click', function(){
+    console.log('AH!');
+    $('.table--premium').toggleClass('table--hidden');
+    itemTotals();
+    zeroItems();
+  });
+};
+
+
+
+import './vendor/scrollspy.js'
