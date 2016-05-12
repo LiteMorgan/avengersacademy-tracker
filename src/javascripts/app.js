@@ -61,6 +61,10 @@ getJSON('/global.json').then(function(data){
     $.each($(data.challenges), function(i, chal){
       trackerBuild(chal, challengeTracker);
     });
+    // Take JSON data.special and build Special Tracker
+    $.each($(data.special), function(i, spec){
+      trackerBuild(spec, specialTracker);
+    });
   });
   return data;
 }).then(function(data){
@@ -152,6 +156,11 @@ function itemCards(data, callback){
     });
   });
   $.each($(data.challenges), function(i, info){
+    $.each($(info.mats), function(j, mats){
+      allItems.push({"frag": mats.frag, "name": mats.item});
+    });
+  });
+  $.each($(data.special), function(i, info){
     $.each($(info.mats), function(j, mats){
       allItems.push({"frag": mats.frag, "name": mats.item});
     });
