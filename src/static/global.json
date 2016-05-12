@@ -28,7 +28,7 @@
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 54 },
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 32 },
-        { "item": "Black Panther Masks", "frag": "blackpanthermasks", "req": 25 },
+        { "item": "Black Panther Habit", "frag": "blackpantherhabit", "req": 20 },
         { "item": "Vibranium", "frag": "currency", "req": 10375 }
       ],
       "premium": false
@@ -176,9 +176,9 @@
       "rank": "Rank 1",
       "buildtime": "3 seconds",
       "mats": [
-        { "item": "Postcards", "frag": "postcards", "req": 13 },
+        { "item": "Old Postcards", "frag": "oldpostcards", "req": 13 },
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 23 },
-        { "item": "S.H.I.E.L.D. Files", "frag": "shieldfiles", "req": 10 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 10 },
         { "item": "Vibranium", "frag": "currency", "req": 1937 }
       ],
       "premium": false
@@ -189,7 +189,7 @@
       "buildtime": "3 seconds",
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 24 },
-        { "item": "S.H.I.E.L.D. Files", "frag": "shieldfiles", "req": 10 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 10 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
       ],
       "premium": false
@@ -207,6 +207,22 @@
   ],
   "special": [
     {
+      "name": "Stark Fabricator",
+      "frag": "starkfabricator",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
+      "name": "Training Center",
+      "frag": "trainingcenter",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
       "name": "Research Center",
       "frag": "researchcenter",
       "buildtime": "3 minutes",
@@ -232,12 +248,30 @@
       ],
       "premium": false
     }, {
+      "name": "Iron Prototype Level 3",
+      "frag": "ironprototypelevel3",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 50 },
+        { "item": "Vibranium", "frag": "currency", "req": 1000 }
+      ],
+      "premium": false
+    }, {
       "name": "S.H.I.E.L.D. Recruit Level 2",
       "frag": "shieldrecruitlevel2",
       "buildtime": "1 hour",
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 10 },
         { "item": "Vibranium", "frag": "currency", "req": 500 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Recruit Level 3",
+      "frag": "shieldrecruitlevel3",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 50 },
+        { "item": "Vibranium", "frag": "currency", "req": 1000 }
       ],
       "premium": false
     }
