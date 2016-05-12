@@ -3,7 +3,9 @@ html {
 }
 
 body {
+  position: relative;
   font-family: $font-family-base;
+  background-color: $brand-primary-light
 }
 
 .wrap {
@@ -13,8 +15,18 @@ body {
   @include make-col-span(12);
 
   &__tracker {
+    position: static;
+    display: block;
     padding-top: $spacing-base;
     padding-bottom: $spacing-base;
+  }
+
+  &__settings {
+    @include make-col-span(6);
+    @include make-col-offset(3);
+    margin-top: $spacing-base;
+    margin-bottom: $spacing-base;
+    background-color: $brand-event-light;
   }
 
   &--fixed {

@@ -3,23 +3,23 @@
   &__check {
     $check: &;
     position: relative;
-    height: $check-height;
-    width: $check-width;
-    //display: none;
+    //height: $check-height;
+    //width: $check-width;
 
     &--box { display: none; }
 
     &--label {
       position: relative;
-      display: block;
+      display: inline-block;
       height: $check-height;
-      width: $check-height;
-      margin-top: .3rem;
+      margin: 0;
+      margin-left: ($check-width * 1.5);
       cursor: pointer;
 
       &::before {
         content: '';
         position: absolute;
+        left: -($check-height * 1.5);
         display: block;
         height: $check-height;
         width: $check-width;
@@ -32,10 +32,8 @@
       &::after {
         content: '';
         position: absolute;
-        top: 50%;
-        right: 0;
-        left: 0;
-        transform: translateY(-50%);
+        top: ($check-height / 4);
+        left: -(($check-width * 1.5) / 1.2);
         display: inline-block;
         height: ($check-height / 2);
         width: ($check-width / 2);
