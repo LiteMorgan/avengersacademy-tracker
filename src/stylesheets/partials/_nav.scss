@@ -1,0 +1,55 @@
+@import "../../node_modules/bootstrap/scss/_nav.scss";
+
+.nav {
+  $nav: &;
+
+  @include make-col();
+  @include make-col-span(7);
+  @include make-col-push(5);
+  text-align: right;
+
+
+  &__wrap {
+    position: fixed;
+    width: 100%;
+    padding: $spacing-base;
+    top: 0;
+    background-color: $white;
+    border-bottom: 1px solid $grey;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  &__box {
+    @include make-row();
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    //width: 100%;
+    margin-left: $spacing-sm;
+    padding: ($spacing-sm / 4) $spacing-sm;
+    float: left;
+    //background-color: $brand-event;
+    color: $brand-primary-dark;
+    border-radius: 100px;
+    
+
+    &.active {
+      background-color: $brand-event;
+      color: $brand-event-color;
+    }
+
+    #{$nav}__item:nth-child(even) & {
+      //background-color: lighten($brand-event, 4%);
+    }
+  }
+
+  &__settings {
+
+  }
+}
