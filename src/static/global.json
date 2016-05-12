@@ -22,6 +22,17 @@
       ],
       "premium": false
     }, {
+      "name": "Black Panther Rank 3",
+      "frag": "blackpanther3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 54 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 32 },
+        { "item": "Black Panther Masks", "frag": "blackpanthermasks", "req": 25 },
+        { "item": "Vibranium", "frag": "currency", "req": 10375 }
+      ],
+      "premium": false
+    }, {
       "name": "Wonder Man",
       "frag": "wonderman1",
       "rank": "Rank 1",
@@ -39,6 +50,56 @@
         { "item": "Vibranium", "frag": "currency", "req": 9832 }
       ],
       "premium": true
+    }, {
+      "name": "Wonder Man Rank 3",
+      "frag": "wonderman3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Headshots", "frag": "headshots", "req": 30 },
+        { "item": "Acting Awards", "frag": "actingawards", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 3012 }
+      ],
+      "premium": true
+    }, {
+      "name": "Wonder Man Rank 4",
+      "frag": "wonderman4",
+      "rank": "Rank 4",
+      "mats": [
+        { "item": "Avengers Identicards", "frag": "identicards", "req": 30 },
+        { "item": "Vibranium", "frag": "currency", "req": 4502 }
+      ],
+      "premium": true
+    }, {
+      "name": "Agent 13",
+      "frag": "agent131",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 30 },
+        { "item": "S.H.I.E.L.D. Badges", "frag": "shieldbadges", "req": 5 },
+        { "item": "Action Cameras", "frag": "actioncameras", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 6341 }
+      ],
+      "premium": false
+    }, {
+      "name": "Spider Man",
+      "frag": "spiderman1",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Shards", "frag": "shards", "req": 995 }
+      ],
+      "premium": true
+    }, {
+      "name": "Spider Man Rank 2",
+      "frag": "spiderman2",
+      "rank": "Rank 2",
+      "mats": [
+        { "item": "Spider-Tracers", "frag": "spidertracers", "req": 30 },
+        { "item": "Web Cartridges", "frag": "webcartridges", "req": 10 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 30 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 30 },
+        { "item": "Vibranium", "frag": "currency", "req": 9496 }
+      ],
+      "premium": true
     }
   ],
   "costumes": [
@@ -52,6 +113,16 @@
         { "item": "Smoke Bombs", "frag": "smokebombs", "req": 5 },
         { "item": "Cloaking Devices", "frag": "cloakingdevices", "req": 3 },
         { "item": "Vibranium", "frag": "currency", "req": 2408 }
+      ]
+    }, {
+      "name": "Captain America Falcon",
+      "frag": "cafalcon",
+      "premium": false,
+      "mats": [
+        { "item": "Red Gloves", "frag": "redgloves", "req": 6 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 28 },
+        { "item": "Jetpack Enhancements", "frag": "jetpackenhancements", "req": 3 },
+        { "item": "Vibranium", "frag": "currency", "req": 6938 }
       ]
     }
   ],
@@ -80,11 +151,46 @@
       "name": "Black Panther Statue",
       "frag": "blackpantherstatue",
       "rank": "Rank 1",
-      "buildtime": "4 hours",
+      "buildtime": "3 seconds",
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 10 },
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 11 },
         { "item": "Vibranium", "frag": "currency", "req": 1840 }
+      ],
+      "premium": false
+    }, {
+      "name": "#TeamCap Poster",
+      "frag": "teamcapposter1",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Flight Goggles", "frag": "flightgoggles", "req": 9 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 13 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 5 },
+        { "item": "Vibranium", "frag": "currency", "req": 1203 }
+      ],
+      "premium": false
+    }, {
+      "name": "#Peggy Carter Statue",
+      "frag": "peggycarterstatue1",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Postcards", "frag": "postcards", "req": 13 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 23 },
+        { "item": "S.H.I.E.L.D. Files", "frag": "shieldfiles", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 1937 }
+      ],
+      "premium": false
+    }, {
+      "name": "Cap Display Case",
+      "frag": "capdisplaycase",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 24 },
+        { "item": "S.H.I.E.L.D. Files", "frag": "shieldfiles", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 1000 }
       ],
       "premium": false
     }
@@ -95,6 +201,43 @@
       "frag": "blackpantherbobble",
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 80 }
+      ],
+      "premium": false
+    }
+  ],
+  "special": [
+    {
+      "name": "Research Center",
+      "frag": "researchcenter",
+      "buildtime": "3 minutes",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
+      "name": "Barracks",
+      "frag": "barracks",
+      "buildtime": "3 minutes",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
+      "name": "Iron Prototype Level 2",
+      "frag": "ironprototypelevel2",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 500 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Recruit Level 2",
+      "frag": "shieldrecruitlevel2",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 500 }
       ],
       "premium": false
     }
