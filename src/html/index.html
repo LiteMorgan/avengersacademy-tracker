@@ -24,15 +24,6 @@
     </div>
 
     <main class="container">
-      <div class="row">
-        <section class="wrap wrap__tracker">
-          <h2>Settings</h2>
-          <div class="input__check">
-            <input class="input__check--box" type="checkbox" name="premiumToggle" id="premiumToggle">
-            <label class="input__check--label" for="premiumToggle">Hide Premium Items</label>
-          </div>
-        </section>
-      </div>
       <div class="row" id="trackerApp">
         <section class="wrap wrap__tracker" id="characters">
           <h2>Characters</h2>
@@ -95,6 +86,8 @@
     <div class="alert alert-success" role="alert">
       More items to come!
     </div>
+
+  {% include 'shared/settings.html' %}
 
   {% include 'shared/error.html' %}
 
