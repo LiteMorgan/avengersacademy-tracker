@@ -1,0 +1,22 @@
+.settings {
+
+  &__wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($brand-primary-dark, .4);
+  }
+
+  &__box {
+    position: relative;
+    @include make-col-span(6);
+    @include make-col-offset(3);
+    margin-top: $nav-height;
+    padding: $spacing-base;
+    background-color: $brand-event-color;
+    border: 1px solid $grey;
+    border-radius: 15px;
+  }
+}
