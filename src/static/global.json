@@ -252,7 +252,7 @@
       "frag": "ironprototypelevel3",
       "buildtime": "1 hour",
       "mats": [
-        { "item": "Hydra Intel", "frag": "hydraintel", "req": 50 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 25 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
       ],
       "premium": false
@@ -270,7 +270,7 @@
       "frag": "shieldrecruitlevel3",
       "buildtime": "1 hour",
       "mats": [
-        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 50 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 25 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
       ],
       "premium": false
