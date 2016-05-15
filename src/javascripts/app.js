@@ -89,10 +89,22 @@ getJSON('/global.json').then(function(data){
       }
     }
   }
+
+  if (!localStorage['aaSettings']) {
+    localStorage['aaSettings'] = JSON.stringify({});
+  } else {
+    var stored = JSON.parse(localStorage.aaSettings);
+
+    if(stored['premiumContentHide'].status){
+      $('input#premiumToggle').prop('checked', true);
+      $('.table--premium').toggleClass('table--hidden');
+    }
+  }
 }).then(function(){
   finishedItems();
   itemTotals();
   zeroItems();
+  settingsMenu();
   premiumToggle();
 });
 
@@ -264,12 +276,65 @@ function premiumToggle(){
   var premiumInput = $('input#premiumToggle');
 
   premiumInput.on('click', function(){
-    console.log('AH!');
     $('.table--premium').toggleClass('table--hidden');
     itemTotals();
     zeroItems();
+
+    if (premiumInput.prop('checked') === true){
+      var storageObj = {};
+
+      storageObj = JSON.parse(localStorage.getItem('aaSettings'));
+      storageObj['premiumContentHide'] = {
+        status: true
+      }
+      localStorage.setItem('aaSettings', JSON.stringify(storageObj));
+    } else {
+      var storageObj = {};
+
+      storageObj = JSON.parse(localStorage.getItem('aaSettings'));
+      storageObj['premiumContentHide'] = {
+        status: false
+      }
+      localStorage.setItem('aaSettings', JSON.stringify(storageObj));
+    }
   });
 };
+
+function settingsMenu(){
+  var btn = $('#settingsToggle'),
+      close = $('#settingsClose');
+
+  btn.on('click', function(){
+    $('.settings').fadeIn();
+  });
+
+  close.on('click', function(){
+    $('.settings').fadeOut();
+  })
+};
+
+
+
+$(function() {
+  // Smooth scrolling function
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 70
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
+  // Mobile menu toggle function
+  $('#menuToggle').on('click', function(){
+    $('.nav').toggleClass('nav--active');
+  })
+});
 
 
 

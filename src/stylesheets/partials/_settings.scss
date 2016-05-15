@@ -4,19 +4,35 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
     width: 100%;
     height: 100vh;
     background-color: rgba($brand-primary-dark, .4);
+    z-index: 1100;
   }
 
   &__box {
     position: relative;
-    @include make-col-span(6);
-    @include make-col-offset(3);
-    margin-top: $nav-height;
+    @include make-col-span(10);
+    @include make-col-offset(1);
+    margin-top: ($nav-height * 2);
     padding: $spacing-base;
     background-color: $brand-event-color;
     border: 1px solid $grey;
     border-radius: 15px;
+
+    @include media-breakpoint-up(md) {
+      @include make-col-span(6);
+      @include make-col-offset(3);
+      margin-top: ($nav-height * 1.5);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: ($spacing-sm * 1.5);
+    font-size: 2rem;
+    cursor: pointer;
   }
 }

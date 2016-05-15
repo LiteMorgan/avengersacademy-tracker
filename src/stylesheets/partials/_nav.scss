@@ -3,10 +3,32 @@
 .nav {
   $nav: &;
 
-  @include make-col();
-  @include make-col-span(9);
-  @include make-col-push(3);
-  text-align: right;
+  @include media-breakpoint-down(sm) {
+    position: fixed;
+    top: $nav-height;
+    width: 100%;
+    height: 0;
+    padding-top: $spacing-sm;
+    background-color: $brand-event-color;
+    overflow: hidden;
+    transition: transform .3s ease-out, height .3s ease-out;
+
+    &--active {
+      height: 100%;
+      max-height: 100vh;
+    }
+
+    & &__item {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    } 
+  }
+
+  @include media-breakpoint-up(md) {
+    @include make-col();
+    @include make-col-span(10);
+  }
 
 
   &__wrap {
@@ -15,7 +37,7 @@
     display: block;
     width: 100%;
     height: $nav-height;
-    padding: $spacing-base;
+    padding: $spacing-base 0;
     background-color: $white;
     text-align: center;
     border-bottom: 1px solid $grey;
@@ -25,6 +47,20 @@
 
   &__box {
     @include make-row();
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  &__settings {
+    @include make-col();
+    @include make-col-span(12);
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+      @include make-col-span(2);
+
+      & #menuToggle { display: none; }
+    }
   }
 
   &__item {
@@ -32,23 +68,33 @@
   }
 
   &__link {
-    display: block;
-    //width: 100%;
-    margin-left: $spacing-sm;
     padding: ($spacing-sm / 4) $spacing-sm;
-    float: left;
-    //background-color: $brand-event;
-    color: $brand-primary-dark;
-    border-radius: 100px;
-    
+
+    @include media-breakpoint-down(sm) {
+      #{$nav}__item & {
+        display: inline-block;
+        margin-bottom: $spacing-sm;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      display: block;
+      margin-right: ($spacing-sm / 1.5);
+      float: left;
+      color: $brand-primary-dark;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: $brand-event;
+      }
+    }
 
     &.active {
       background-color: $brand-event;
       color: $brand-event-color;
-    }
-
-    #{$nav}__item:nth-child(even) & {
-      //background-color: lighten($brand-event, 4%);
+      border-radius: 100px;
     }
   }
 
