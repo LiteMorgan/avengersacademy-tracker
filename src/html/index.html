@@ -4,85 +4,90 @@
 
   {% include 'shared/header.html' %}
 
-  <div class="container">
-    <div class="row">
-      <section class="wrap">
-        <p>Special thanks to <a href="https://reddit.com/user/umbraetmors" target="_blank">/u/umbraetmors</a>, <a href="https://www.reddit.com/user/SunGodKizaru" target="_blank">/u/SunGodKizaru</a>, and <a href="https://www.reddit.com/user/fairyshade" target="_blank">/u/fairyshade</a> for <a href="https://www.reddit.com/r/avengersacademygame/search?q=flair_text%3A%27Datamining%27&sort=new&restrict_sr=on&t=all" target="_blank">their frequent Datamining posts</a>. Its all very appreciated!</p>
-        <p>Please feel free to <a href="https://github.com/getignited/avengersacademy-tracker/issues" target="_blank">drop me a line</a> with any feature requests or issues. The Event Tracker is still very much a work in progress to hopefully become a useful tool for the community.</p>
-        <p><small>Avengers Academy Event Tracker {% block version %}{{ version }}{% endblock %} has been assembled by <a href="https://www.reddit.com/user/getignited" target="_blank">/u/getignited</a>.</small></p>
-      </section>
-    </div>
-  </div>
+  {% include 'shared/menu.html' %}
 
-  <div class="container__fluid container__fluid--event">
-    <div class="row">
-      <div class="wrap--fixed text--center"><h2>Materials</h2></div>
-      <section class="wrap wrap--flex wrap--fixed" id="eventItems"></section>
-    </div>
-  </div>
-
-  <main class="container">
-    <div class="row" id="trackerApp">
-      <section class="wrap wrap__tracker wrap--fixed">
-        <h2>Characters</h2>
-        <div id="characterTracker">
-          <section class="table__row table--head">
-            <div class="table__col table__col--xs">Got it</div>
-            <div class="table__col table__col--md">Name</div>
-            <div class="table__col table__col--lg">Materials</div>
-          </section>
-        </div>
-      </section>
-
-      <section class="wrap wrap__tracker wrap--fixed">
-        <h2>Costumes</h2>
-        <div id="costumeTracker">
-          <section class="table__row table--head">
-            <div class="table__col table__col--xs">Got it</div>
-            <div class="table__col table__col--md">Name</div>
-            <div class="table__col table__col--lg">Materials</div>
-          </section>
-        </div>
-      </section>
-
-      <section class="wrap wrap__tracker wrap--fixed">
-        <h2>Buildings</h2>
-        <div id="buildingTracker">
-          <section class="table__row table--head">
-            <div class="table__col table__col--xs">Got it</div>
-            <div class="table__col table__col--md">Name</div>
-            <div class="table__col table__col--lg">Materials</div>
-          </section>
-        </div>
-      </section>
-
-      <section class="wrap wrap__tracker wrap--fixed">
-        <h2>Challenges</h2>
-        <div id="challengeTracker">
-          <section class="table__row table--head">
-            <div class="table__col table__col--xs">Got it</div>
-            <div class="table__col table__col--md">Name</div>
-            <div class="table__col table__col--lg">Materials</div>
-          </section>
-        </div>
-      </section>
-
-      <section class="wrap wrap__tracker wrap--fixed">
-        <h2>Special Items</h2>
-        <div id="specialTracker">
-          <section class="table__row table--head">
-            <div class="table__col table__col--xs">Got it</div>
-            <div class="table__col table__col--md">Name</div>
-            <div class="table__col table__col--lg">Materials</div>
-          </section>
-        </div>
-      </section>
-
-      <div class="alert alert-success" role="alert">
-        More items to come!
+    <div class="container">
+      <div class="row">
+        <section class="wrap">
+          <p>Special thanks to <a href="https://reddit.com/user/umbraetmors" target="_blank">/u/umbraetmors</a>, <a href="https://www.reddit.com/user/SunGodKizaru" target="_blank">/u/SunGodKizaru</a>, and <a href="https://www.reddit.com/user/fairyshade" target="_blank">/u/fairyshade</a> for <a href="https://www.reddit.com/r/avengersacademygame/search?q=flair_text%3A%27Datamining%27&sort=new&restrict_sr=on&t=all" target="_blank">their frequent Datamining posts</a>. Its all very appreciated!</p>
+          <p>Please feel free to <a href="https://github.com/getignited/avengersacademy-tracker/issues" target="_blank">drop me a line</a> with any feature requests or issues. The Event Tracker is still very much a work in progress to hopefully become a useful tool for the community.</p>
+          <p><small>Avengers Academy Event Tracker {% block version %}{{ version }}{% endblock %} has been assembled by <a href="https://www.reddit.com/user/getignited" target="_blank">/u/getignited</a>.</small></p>
+        </section>
       </div>
     </div>
-  </main>
+
+    <div class="container__fluid container__fluid--event" id="materials">
+      <div class="row">
+        <div class="wrap--fixed text--center"><h2>Materials</h2></div>
+        <section class="wrap wrap--flex wrap--fixed" id="eventItems"></section>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="row" id="trackerApp">
+        <section class="wrap wrap__tracker" id="characters">
+          <h2>Characters</h2>
+          <div id="characterTracker">
+            <section class="table__row table--head">
+              <div class="table__col table__col--xs">Got it</div>
+              <div class="table__col table__col--md">Name</div>
+              <div class="table__col table__col--lg">Materials</div>
+            </section>
+          </div>
+        </section>
+
+        <section class="wrap wrap__tracker" id="costumes">
+          <h2>Costumes</h2>
+          <div id="costumeTracker">
+            <section class="table__row table--head">
+              <div class="table__col table__col--xs">Got it</div>
+              <div class="table__col table__col--md">Name</div>
+              <div class="table__col table__col--lg">Materials</div>
+            </section>
+          </div>
+        </section>
+
+        <section class="wrap wrap__tracker" id="buildings">
+          <h2>Buildings</h2>
+          <div id="buildingTracker">
+            <section class="table__row table--head">
+              <div class="table__col table__col--xs">Got it</div>
+              <div class="table__col table__col--md">Name</div>
+              <div class="table__col table__col--lg">Materials</div>
+            </section>
+          </div>
+        </section>
+
+        <section class="wrap wrap__tracker" id="challenges">
+          <h2>Challenges</h2>
+          <div id="challengeTracker">
+            <section class="table__row table--head">
+              <div class="table__col table__col--xs">Got it</div>
+              <div class="table__col table__col--md">Name</div>
+              <div class="table__col table__col--lg">Materials</div>
+            </section>
+          </div>
+        </section>
+
+        <section class="wrap wrap__tracker" id="special">
+          <h2>Special Items</h2>
+          <div id="specialTracker">
+            <section class="table__row table--head">
+              <div class="table__col table__col--xs">Got it</div>
+              <div class="table__col table__col--md">Name</div>
+              <div class="table__col table__col--lg">Materials</div>
+            </section>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <div class="alert alert-success" role="alert">
+      More items to come!
+    </div>
+
+  {% include 'shared/settings.html' %}
 
   {% include 'shared/error.html' %}
 

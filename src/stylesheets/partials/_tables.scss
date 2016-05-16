@@ -27,6 +27,10 @@
     background-color: lighten($brand-premium, 30%);
   }
 
+  &--hidden {
+    display: none;
+  }
+
   &__col {
     &--xs { flex: 1 15%; margin-right: 2%; }
     &--sm { flex: 1 10%; margin-right: 2%; }

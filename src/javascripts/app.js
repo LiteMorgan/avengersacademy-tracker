@@ -1,7 +1,6 @@
 const underscore = require('underscore');
 global._ = underscore
 
-
 // getJSON Function
 function get(url) {
   // Return a new promise.
@@ -90,10 +89,23 @@ getJSON('/global.json').then(function(data){
       }
     }
   }
+
+  if (!localStorage['aaSettings']) {
+    localStorage['aaSettings'] = JSON.stringify({});
+  } else {
+    var stored = JSON.parse(localStorage.aaSettings);
+
+    if(stored['premiumContentHide'].status){
+      $('input#premiumToggle').prop('checked', true);
+      $('.table--premium').toggleClass('table--hidden');
+    }
+  }
 }).then(function(){
   finishedItems();
   itemTotals();
   zeroItems();
+  settingsMenu();
+  premiumToggle();
 });
 
 // Build Tracker
@@ -193,12 +205,11 @@ function itemTotals(){
 
     rows.each(function(){
       
-
       var ele = $(this),
           rowComplete = ele.hasClass('table__row--completed'),
           mats = ele.find('.item__req[data-item="' + frag + '"]');
 
-      if(rowComplete){
+      if( rowComplete || ele.hasClass('table--hidden') ){
 
       } else {
         sum += Number( mats.text() );
@@ -259,3 +270,72 @@ function storageUpd(itemID, got){
   }
   localStorage.setItem('aaCivilWar', JSON.stringify(storageObj));
 }
+
+
+function premiumToggle(){
+  var premiumInput = $('input#premiumToggle');
+
+  premiumInput.on('click', function(){
+    $('.table--premium').toggleClass('table--hidden');
+    itemTotals();
+    zeroItems();
+
+    if (premiumInput.prop('checked') === true){
+      var storageObj = {};
+
+      storageObj = JSON.parse(localStorage.getItem('aaSettings'));
+      storageObj['premiumContentHide'] = {
+        status: true
+      }
+      localStorage.setItem('aaSettings', JSON.stringify(storageObj));
+    } else {
+      var storageObj = {};
+
+      storageObj = JSON.parse(localStorage.getItem('aaSettings'));
+      storageObj['premiumContentHide'] = {
+        status: false
+      }
+      localStorage.setItem('aaSettings', JSON.stringify(storageObj));
+    }
+  });
+};
+
+function settingsMenu(){
+  var btn = $('#settingsToggle'),
+      close = $('#settingsClose');
+
+  btn.on('click', function(){
+    $('.settings').fadeIn();
+  });
+
+  close.on('click', function(){
+    $('.settings').fadeOut();
+  })
+};
+
+
+
+$(function() {
+  // Smooth scrolling function
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - 70
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
+  // Mobile menu toggle function
+  $('#menuToggle').on('click', function(){
+    $('.nav').toggleClass('nav--active');
+  })
+});
+
+
+
+import '../../node_modules/bootstrap/dist/js/umd/scrollspy.js'
