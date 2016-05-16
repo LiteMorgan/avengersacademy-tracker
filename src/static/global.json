@@ -372,6 +372,26 @@
       ],
       "premium": false
     }, {
+      "name": "Iron Sentry Level 5",
+      "frag": "ironsentrylevel5",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 100 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 4000 }
+      ],
+      "premium": false
+    }, {
+      "name": "Iron Sentry Level 6",
+      "frag": "ironsentrylevel6",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 100 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 50 },
+        { "item": "Vibranium", "frag": "currency", "req": 7000 }
+      ],
+      "premium": false
+    }, {
       "name": "S.H.I.E.L.D. Recruit Level 2",
       "frag": "shieldrecruitlevel2",
       "buildtime": "1 hour",
@@ -397,6 +417,26 @@
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 100 },
         { "item": "Field Gear", "frag": "fieldgear", "req": 3 },
         { "item": "Vibranium", "frag": "currency", "req": 2000 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Personnel Level 5",
+      "frag": "shieldpersonnellevel5",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 100 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 4000 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Personnel Level 6",
+      "frag": "shieldpersonnellevel6",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 100 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 50 },
+        { "item": "Vibranium", "frag": "currency", "req": 7000 }
       ],
       "premium": false
     }
