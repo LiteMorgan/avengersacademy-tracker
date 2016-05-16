@@ -1,6 +1,6 @@
 {
   "name": "avengersacademy-tracker",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Event Tracking application for the Avengers Academy iOS and Android game.",
   "engines": {
     "node": ">=0.12.0 ~5.9.0",
