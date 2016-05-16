@@ -70,6 +70,17 @@
       ],
       "premium": true
     }, {
+      "name": "Wonder Man Rank 5",
+      "frag": "wonderman5",
+      "rank": "Rank 5",
+      "mats": [
+        { "item": "Selfie Sticks", "frag": "selfiesticks", "req": 40 },
+        { "item": "Headshots", "frag": "headshots", "req": 40 },
+        { "item": "Acting Awards", "frag": "actingawards", "req": 15 },
+        { "item": "Vibranium", "frag": "currency", "req": 8163 }
+      ],
+      "premium": true
+    }, {
       "name": "Agent 13",
       "frag": "agent131",
       "rank": "Rank 1",
@@ -78,6 +89,15 @@
         { "item": "S.H.I.E.L.D. Badges", "frag": "shieldbadges", "req": 5 },
         { "item": "Action Cameras", "frag": "actioncameras", "req": 10 },
         { "item": "Vibranium", "frag": "currency", "req": 6341 }
+      ],
+      "premium": false
+    }, {
+      "name": "Agent 13 Rank 2",
+      "frag": "agent132",
+      "rank": "Rank 2",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 20 },
+        { "item": "Vibranium", "frag": "currency", "req": 6412 }
       ],
       "premium": false
     }, {
@@ -100,6 +120,52 @@
         { "item": "Vibranium", "frag": "currency", "req": 9496 }
       ],
       "premium": true
+    }, {
+      "name": "Spider Man Rank 3",
+      "frag": "spiderman3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Press Passes", "frag": "presspasses", "req": 20 },
+        { "item": "Past-Due Bills", "frag": "pastduebills", "req": 20 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 20 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 20 },
+        { "item": "Vibranium", "frag": "currency", "req": 19036 }
+      ],
+      "premium": true
+    }, {
+      "name": "Spider Man Rank 4",
+      "frag": "spiderman4",
+      "rank": "Rank 4",
+      "mats": [
+        { "item": "Press Passes", "frag": "presspasses", "req": 30 },
+        { "item": "Past-Due Bills", "frag": "pastduebills", "req": 30 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 40 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 40 },
+        { "item": "Vibranium", "frag": "currency", "req": 23506 }
+      ],
+      "premium": true
+    }, {
+      "name": "Spider Man Rank 5",
+      "frag": "spiderman5",
+      "rank": "Rank 5",
+      "mats": [
+        { "item": "Newspapers", "frag": "newspapers", "req": 45 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 100 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 100 },
+        { "item": "Vibranium", "frag": "currency", "req": 24489 }
+      ],
+      "premium": true
+    }, {
+      "name": "Crossbones",
+      "frag": "crossbones1",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Crossbones Tokens", "frag": "crossbonestokens", "req": 145 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 15 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 15 },
+        { "item": "Vibranium", "frag": "currency", "req": 4500 }
+      ],
+      "premium": false
     }
   ],
   "costumes": [
@@ -148,6 +214,17 @@
       ],
       "premium": false
     }, {
+      "name": "Wakandan Embassy Rank 2",
+      "frag": "wakandanembassy2",
+      "rank": "Rank 2",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Field Gear", "frag": "fieldgear", "req": 4 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 4 },
+        { "item": "Vibranium", "frag": "currency", "req": 4132  }
+      ],
+      "premium": false
+    }, {
       "name": "Black Panther Statue",
       "frag": "blackpantherstatue",
       "rank": "Rank 1",
@@ -193,6 +270,18 @@
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
       ],
       "premium": false
+    }, {
+      "name": "Cap WW2 Jeep",
+      "frag": "capww2jeep",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Crossbows", "frag": "crossbows", "req": 25 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 8 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 8 },
+        { "item": "Vibranium", "frag": "currency", "req": 1432 }
+      ],
+      "premium": false
     }
   ],
   "challenges": [
@@ -215,14 +304,6 @@
       ],
       "premium": false
     }, {
-      "name": "Training Center",
-      "frag": "trainingcenter",
-      "buildtime": "1 hour",
-      "mats": [
-        { "item": "Vibranium", "frag": "currency", "req": 100 }
-      ],
-      "premium": false
-    }, {
       "name": "Research Center",
       "frag": "researchcenter",
       "buildtime": "3 minutes",
@@ -231,8 +312,32 @@
       ],
       "premium": false
     }, {
+      "name": "Tony's Training Arcade",
+      "frag": "trainingarcade",
+      "buildtime": "3 minutes",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
       "name": "Barracks",
       "frag": "barracks",
+      "buildtime": "3 minutes",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
+      "name": "Training Center",
+      "frag": "trainingcenter",
+      "buildtime": "1 hour",
+      "mats": [
+        { "item": "Vibranium", "frag": "currency", "req": 100 }
+      ],
+      "premium": false
+    }, {
+      "name": "Cap's Obstacle Course",
+      "frag": "obstaclecourse",
       "buildtime": "3 minutes",
       "mats": [
         { "item": "Vibranium", "frag": "currency", "req": 100 }
@@ -250,10 +355,20 @@
     }, {
       "name": "Iron Prototype Level 3",
       "frag": "ironprototypelevel3",
-      "buildtime": "1 hour",
+      "buildtime": "4 hours",
       "mats": [
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 25 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
+      ],
+      "premium": false
+    }, {
+      "name": "Iron Sentry",
+      "frag": "ironsentrylevel1",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 100 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 3 },
+        { "item": "Vibranium", "frag": "currency", "req": 2000 }
       ],
       "premium": false
     }, {
@@ -268,10 +383,20 @@
     }, {
       "name": "S.H.I.E.L.D. Recruit Level 3",
       "frag": "shieldrecruitlevel3",
-      "buildtime": "1 hour",
+      "buildtime": "4 hours",
       "mats": [
-        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 25 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 50 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Personnel",
+      "frag": "shieldpersonnellevel1",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 100 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 3 },
+        { "item": "Vibranium", "frag": "currency", "req": 2000 }
       ],
       "premium": false
     }
