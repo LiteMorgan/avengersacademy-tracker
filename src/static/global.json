@@ -166,6 +166,17 @@
         { "item": "Vibranium", "frag": "currency", "req": 4500 }
       ],
       "premium": false
+    }, {
+      "name": "Crossbones Rank 2",
+      "frag": "crossbones2",
+      "rank": "Rank 2",
+      "mats": [
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 8 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 6 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 61 },
+        { "item": "Vibranium", "frag": "currency", "req": 7912 }
+      ],
+      "premium": false
     }
   ],
   "costumes": [
@@ -268,18 +279,6 @@
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 24 },
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 10 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
-      ],
-      "premium": false
-    }, {
-      "name": "Cap WW2 Jeep",
-      "frag": "capww2jeep",
-      "rank": "Rank 1",
-      "buildtime": "3 seconds",
-      "mats": [
-        { "item": "Crossbows", "frag": "crossbows", "req": 25 },
-        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 8 },
-        { "item": "Hydra Intel", "frag": "hydraintel", "req": 8 },
-        { "item": "Vibranium", "frag": "currency", "req": 1432 }
       ],
       "premium": false
     }
