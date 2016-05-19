@@ -94,8 +94,9 @@ getJSON('/global.json').then(function(data){
     localStorage['aaSettings'] = JSON.stringify({});
   } else {
     var stored = JSON.parse(localStorage.aaSettings);
-
-    if(stored['premiumContentHide'].status){
+    if($.isEmptyObject(stored)) {
+      return;
+    } else if(stored['premiumContentHide'].status) {
       $('input#premiumToggle').prop('checked', true);
       $('.table--premium').toggleClass('table--hidden');
     }
