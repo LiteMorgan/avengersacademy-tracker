@@ -33,6 +33,17 @@
       ],
       "premium": false
     }, {
+      "name": "Black Panther Rank 4",
+      "frag": "blackpanther4",
+      "rank": "Rank 4",
+      "mats": [
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 4 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 51 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 42 },
+        { "item": "Vibranium", "frag": "currency", "req": 11394 }
+      ],
+      "premium": false
+    }, {
       "name": "Wonder Man",
       "frag": "wonderman1",
       "rank": "Rank 1",
@@ -98,6 +109,16 @@
       "mats": [
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 20 },
         { "item": "Vibranium", "frag": "currency", "req": 6412 }
+      ],
+      "premium": false
+    }, {
+      "name": "Agent 13 Rank 3",
+      "frag": "agent133",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 42 },
+        { "item": "Smoke Pellets", "frag": "smokepellets", "req": 3 },
+        { "item": "Vibranium", "frag": "currency", "req": 11394 }
       ],
       "premium": false
     }, {
@@ -172,11 +193,52 @@
       "rank": "Rank 2",
       "mats": [
         { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 8 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 6 },
         { "item": "Field Gear", "frag": "fieldgear", "req": 6 },
-        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 61 },
-        { "item": "Vibranium", "frag": "currency", "req": 7912 }
+        { "item": "Vibranium", "frag": "currency", "req": 6234 }
       ],
       "premium": false
+    }, {
+      "name": "Crossbones Rank 3",
+      "frag": "crossbones3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Battle Gear", "frag": "battlegear", "req": 5 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 20 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 12851 }
+      ],
+      "premium": false
+    }, {
+      "name": "Sif",
+      "frag": "sif1",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Shards", "frag": "shards", "req": 495 }
+      ],
+      "premium": true
+    }, {
+      "name": "Sif Rank 2",
+      "frag": "sif2",
+      "rank": "Rank 2",
+      "mats": [
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 8 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 6 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 6 },
+        { "item": "Vibranium", "frag": "currency", "req": 5173 }
+      ],
+      "premium": true
+    }, {
+      "name": "Sif Rank 3",
+      "frag": "sif3",
+      "rank": "Rank 3",
+      "mats": [
+        { "item": "Battle Gear", "frag": "battlegear", "req": 5 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 20 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 10274 }
+      ],
+      "premium": true
     }
   ],
   "costumes": [
@@ -200,6 +262,17 @@
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 28 },
         { "item": "Jetpack Enhancements", "frag": "jetpackenhancements", "req": 3 },
         { "item": "Vibranium", "frag": "currency", "req": 6938 }
+      ]
+    }, {
+      "name": "Capbuster",
+      "frag": "capbuster",
+      "premium": false,
+      "mats": [
+        { "item": "Apple Pies", "frag": "applepies", "req": 10 },
+        { "item": "Sparklers", "frag": "sparklers", "req": 10 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 50 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 5 },
+        { "item": "Vibranium", "frag": "currency", "req": 4917 }
       ]
     }
   ],
@@ -236,6 +309,19 @@
       ],
       "premium": false
     }, {
+      "name": "Wakandan Embassy Rank 3",
+      "frag": "wakandanembassy3",
+      "rank": "Rank 3",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Field Gear", "frag": "fieldgear", "req": 10 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 10 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 50 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 50 },
+        { "item": "Vibranium", "frag": "currency", "req": 9145  }
+      ],
+      "premium": false
+    }, {
       "name": "Black Panther Statue",
       "frag": "blackpantherstatue",
       "rank": "Rank 1",
@@ -259,7 +345,7 @@
       ],
       "premium": false
     }, {
-      "name": "#Peggy Carter Statue",
+      "name": "Peggy Carter Statue",
       "frag": "peggycarterstatue1",
       "rank": "Rank 1",
       "buildtime": "3 seconds",
@@ -279,6 +365,29 @@
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 24 },
         { "item": "Hydra Intel", "frag": "hydraintel", "req": 10 },
         { "item": "Vibranium", "frag": "currency", "req": 1000 }
+      ],
+      "premium": false
+    }, {
+      "name": "Iron Man's Armor Display Case",
+      "frag": "ironmandisplaycase",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Baseballs", "frag": "baseballs", "req": 12 },
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 40 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 20 },
+        { "item": "Vibranium", "frag": "currency", "req": 2104 }
+      ],
+      "premium": false
+    }, {
+      "name": "WWII Captain America Statue",
+      "frag": "wwiicapstatue",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 10 },
+        { "item": "Hydra Intel", "frag": "hydraintel", "req": 10 },
+        { "item": "Vibranium", "frag": "currency", "req": 2041 }
       ],
       "premium": false
     }
