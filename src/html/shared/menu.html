@@ -1,28 +1,56 @@
-<div class="nav__wrap" id="navspy">
+<div class="sidebar" id="navspy">
   <nav class="nav__box">
-    <ul class="nav">
-      <li class="nav__item nav-item">
-        <a class="nav__link nav-link" href="#materials">Materials</a>
-      </li>
+    <ul class="nav__content">
+      {% if characters %}
       <li class="nav__item nav-item">
         <a class="nav__link nav-link" href="#characters">Characters</a>
       </li>
+      {% endif %}
+      {% if costumes %}
       <li class="nav__item nav-item">
         <a class="nav__link nav-link" href="#costumes">Costumes</a>
       </li>
+      {% endif %}
+      {% if buildings %}
       <li class="nav__item nav-item">
         <a class="nav__link nav-link" href="#buildings">Buildings</a>
       </li>
+      {% endif %}
+      {% if prizes %}
+      <li class="nav__item nav-item">
+        <a class="nav__link nav-link" href="#prizes">Prizes</a>
+      </li>
+      {% endif %}
+      {% if challenges %}
       <li class="nav__item nav-item">
         <a class="nav__link nav-link" href="#challenges">Challenges</a>
       </li>
+      {% endif %}
+      {% if special %}
       <li class="nav__item nav-item">
         <a class="nav__link nav-link" href="#special">Special</a>
       </li>
+      {% endif %}
+      <hr />
+      <li class="nav__item nav-item">
+        <button class="btn btn__text nav__link nav__toggle" href="#materials">Materials</button>
+        <div class="nav__drawer">
+          <ul class="nav__drawerinner flex flex__column" id="materialList"></ul>
+        </div>
+      </li>
+      <hr />
+      <li class="nav__item">
+        <button class="btn btn__text nav__link nav__toggle" id="settingsToggle">Settings</button>
+        <div class="nav__drawer">
+          <ul class="nav__drawerinner">
+            {% include 'shared/settings.html' %}
+          </ul>
+        </div>
+      </li>
+      <hr />
+      <li class="nav__item">
+        <a class="nav__link" href="/changelog.html">Change Log</a>
+      </li>
     </ul>
-    <div class="nav__settings">
-      <button class="btn nav__link" id="menuToggle">Menu</button>
-      <button class="btn nav__link" id="settingsToggle">Settings</button>
-    </div>
   </nav>
 </div>

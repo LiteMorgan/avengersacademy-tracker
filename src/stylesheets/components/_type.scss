@@ -1,0 +1,61 @@
+h1 {
+  margin: 0 0 $spacing-base 0;
+  padding: $spacing-sm 0;
+  font-size: $font-h1-size;
+  line-height: $font-h1-line-height;
+  border-bottom: $border-height solid $brand-event-dark;
+
+  small {
+    color: $brand-event;
+    font-size: $font-h1-small-size;
+    font-weight: $font-weight-light;
+  }
+}
+
+h2 {
+  margin-bottom: $spacing-base;
+  font-size: $font-h2-size;
+  font-weight: $font-weight-light;
+}
+
+h3 {
+  margin-bottom: $spacing-sm;
+  font-size: $font-h3-size;
+  font-weight: $font-weight-heavy;
+  line-height: $font-h3-line-height;
+
+  small {
+    display: block;
+    font-style: italic;
+    font-size: $font-h3-small-size;
+  }
+}
+
+p { margin-bottom: $spacing-base; }
+
+.text {
+  &--left { text-align: left; }
+  &--center { text-align: center; }
+  &--right { text-align: right; }
+}
+
+.shadowed {
+  color: $brand-event-color;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: $font-weight-heavy;
+  text-shadow: 0px 0px 1px $brand-primary-dark,
+               0px 1px 1px $brand-primary-dark,
+               0px -1px 1px $brand-primary-dark,
+               1px 1px 1px $brand-primary-dark,
+               -1px 1px 1px $brand-primary-dark,
+               1px -1px 1px $brand-primary-dark,
+               -1px -1px 1px $brand-primary-dark,
+               0px 0px 1px $brand-primary-dark,
+               0px 1px 1px $brand-primary-dark,
+               0px -1px 1px $brand-primary-dark,
+               1px 1px 1px $brand-primary-dark,
+               -1px 1px 1px $brand-primary-dark,
+               1px -1px 1px $brand-primary-dark,
+               -1px -1px 1px $brand-primary-dark;
+}

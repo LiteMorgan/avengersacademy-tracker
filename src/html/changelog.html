@@ -1,0 +1,62 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+
+  {% include 'shared/header.html' %}
+  <div class="wrap">
+    <div class="section">
+      <main class="content content__log">
+        <h1>Avengers Academy Event Tracker <br>Change Log</h1>
+        <a class="btn btn__bordered btn--wide btn--event" href="/">Return to the tracker</a>
+        <br><br>
+
+        <article>
+          <h2>2016.7.02 - Change Log</h2>
+          <h3>Look what the Cat dragged in</h3>
+          <p>After days of "Coming soons", Part 2 is here! Here's what's new to look out for.</p>
+          <h3>Event additions</h3>
+          <ul class="ul">
+            <li class="ul__point"><strong>Week 2</strong> items for Act 1 have been added.</li>
+            <li class="ul__point">The <strong>Black Cat</strong> has come out to play! Ranks 1 to 3 are available, and at this time the details for Ranks 4 to 5 are unknown.</li>
+            <li class="ul__point">That <strong>World War 2 Cap</strong> costume is finally available! No materials here, just beat the 7th fight with The Lizard.</li>
+            <li class="ul__point">New buildings. The <strong>Power Plant, Sky-Cycle Lot and the Research Center</strong> can be now be built in your own little Downtown New York.</li>
+            <li><strong>Event Prizes for Part 2</strong> are available. Currently only the details for two of these are known. Expect an update once I know more!</li>
+          </ul>
+          <p>If you're able to help in any way with some of the missing details, drop me a line on <a href="https://www.reddit.com/u/getignited" target="_blank">Reddit</a>, or <a href="https://github.com/getignited/avengersacademy-tracker/issues" target="_blank">open an issue on the Github page</a>. That's all for now!</p>
+        </article>
+
+        <article>
+          <h2>2016.6.30 - Change Log</h2>
+          <h3>The Spider-Man cometh</h3>
+          <p>A new event has started! Admittedly a week ago, but they did only give me a days notice as to <em>when</em> it was actually starting so, there's that. Anyway, lots of changes about–including this shiny new change log–so let's get to logging.</p>
+          <h3>Event additions</h3>
+          <ul class="ul">
+            <li class="ul__point"><strong>Week 1</strong> items for Act 1 have been added.</li>
+            <li class="ul__point"><strong>Spider-Man</strong> Ranks 1 to 5 are available to check off.</li>
+            <li class="ul__point">Additionally, if you spent the shards, <strong>Spider-Ham</strong> has arrived from Earth-8311, with his Ranks 1 to 5 in tow.</li>
+            <li class="ul__point">Wasp's <strong>Reporter Wasp</strong> costume is available.</li>
+            <li class="ul__point">Unlockable (unwebbable?) buildings in the new 'Downtown New York' district are available to be unlocked. These are the <strong>Daily Bugle, Photo Lab and Spider-Man's Workshop</strong>. As to how they built that entire area there overnight (and then let it get webbed up...), we'll leave for another time.</li>
+            <li class="ul__point"><strong>Event Prizes for Part 1</strong> have been added. Unfortuantely, these are now unavailable, and have been marked as expired. Feel free to check these off if you got them.</li>
+            <li class="ul__point">As it seems Event Prizes will become unavailable after their respective weeks, I will remove materials from them once they are unavailable. This way, it doesn't give you unnecessary materials.</li>
+          </ul>
+          <h3>Site additions</h3>
+          <ul class="ul">
+            <li class="ul__point"><strong>A whole new look!</strong> As I say, this was planned, but was only thrown into action very early on a Monday morning after much code delving. Tables are gone, and cards are in.</li>
+            <li class="ul__point">A much requested feature during Civil War - <strong>individual material marking!</strong> You can check off any items you have obtained, and they will be removed from the materials checklist.</li>
+            <li class="ul__point"><strong>Card tracking</strong>, which I'll explain in a bit more detail below, will allow you to keep certain cards easy to find at all times (until you are done with them, and discard them, that is).</li>
+            <li class="ul__point">A <strong>newly organised menu.</strong> Sure, it doesn't get you super excited, but it's a lot cleaner than the old one hovering at the top. It also gives rise to:</li>
+            <li class="ul__point"><strong>A new material list!</strong> This was something I wanted to clean up from Civil War, as that material list quickly got long and arduous to scroll up and down to. The new one is contained in your sidebar, and can be hidden and shown whenever you fancy.</li>
+            <li class="ul__point"><strong>Filters!</strong> While there was a Premium filter added during Civil War (let's forget about that bug that stopped everyone using the site though..), there are now a few more options available - you can hide your completed cards, premium cards, or choose to show only those items you have decided to track. Make it yours, captain!</li>
+            <li class="ul__point">Last but not least, <strong>the change log!</strong> Something I wanted to add in before, but this will allow you to see any updates, no matter how big or small they may be. There may still be some changes to this, but we shall see!</li>
+          </ul>
+          <p>And for now, that's all she wrote. In lots and lots of code. Be sure to check back to see any changes that may have been added (you never know, I might add some secretly cool stuff!).</p>
+          <p>Any suggestions you may have for the site, please feel free to start a discussion <a href="https://github.com/getignited/avengersacademy-tracker/issues" target="_blank">over at Github</a>.</p>
+          <p>Laters, true believers! <s>Stan Lee</s></p>
+        </article>
+        <a class="btn btn__bordered btn--wide btn--event" href="/">Return to the tracker</a>
+        {% include 'shared/footer.html' %}
+      </main>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  &__icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+  }
+  &__poster {
+    max-width: 600px;
+  }
+  &--logo {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    max-width: 245px;
+
+    @include media-breakpoint-down(lg) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &--error {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 100%;
+      width:  100%;
+      margin: auto;
+      background-color: lighten($brand-primary-dark, 50%)
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.col {
+  @include make-col(0rem);
+  @include make-col-span(12);
+
+  &--2 {
+    @include make-col(.5rem);
+    @include make-col-span(6);
+  }
+
+  &--4 {
+    @include media-breakpoint-up(md) {
+      @include make-col(2rem);
+      @include make-col-span(6);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(1rem);
+      @include make-col-span(4);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include make-col-span(3);
+    }
+  }
+}

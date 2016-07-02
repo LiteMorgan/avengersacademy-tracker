@@ -1,0 +1,48 @@
+.card {
+  $card: &;
+  margin-bottom: $spacing-base;
+  transition: opacity .3s ease-out;
+
+  // Contains the card and applys shadows
+  &__body {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    background-color: $white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+                0 3px 6px rgba(0,0,0,0.23);
+    transition: box-shadow .2s ease-out;
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                  0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+
+  // Cell for holding content sections
+  &__cell {
+    @include make-row(0rem);
+    min-height: $spacing-xs;
+    padding: $spacing-sm;
+
+    // Standard item colour
+    &--item {
+      @include gradient-directional($brand-event,
+                                    $brand-event-secondary,
+                                    140deg);
+    }
+    // Premium item colour
+    &--premium {
+      @include gradient-directional($brand-premium,
+                                    $brand-premium-light,
+                                    140deg);
+    }
+    // List item colour
+    &--list { background-color: $brand-primary-light; }
+  }
+
+  // Marks card as completed and lowers the visibility
+  &--checked { opacity: .56; }
+  &--trackedon { display: block !important; }
+  //&--hidden { display: none; }
+}
