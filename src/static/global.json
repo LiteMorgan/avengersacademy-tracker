@@ -122,6 +122,15 @@
       ],
       "premium": false
     }, {
+      "name": "Agent 13 Rank 4",
+      "frag": "agent134",
+      "rank": "Rank 4",
+      "mats": [
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 25 },
+        { "item": "Vibranium", "frag": "currency", "req": 15108 }
+      ],
+      "premium": false
+    }, {
       "name": "Spider Man",
       "frag": "spiderman1",
       "rank": "Rank 1",
@@ -239,6 +248,17 @@
         { "item": "Vibranium", "frag": "currency", "req": 10274 }
       ],
       "premium": true
+    }, {
+      "name": "Madame Hydra",
+      "frag": "madamehydra1",
+      "rank": "Rank 1",
+      "mats": [
+        { "item": "Green Lipstick", "frag": "greenlipstick", "req": 7 },
+        { "item": "Venomous Snake", "frag": "venomoussnake", "req": 3 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 3 },
+        { "item": "Vibranium", "frag": "currency", "req": 3049 }
+      ],
+      "premium": false
     }
   ],
   "costumes": [
@@ -390,6 +410,17 @@
         { "item": "Vibranium", "frag": "currency", "req": 2041 }
       ],
       "premium": false
+    }, {
+      "name": "Madame Hydra's Classroom",
+      "frag": "madamehydraclassroom",
+      "rank": "Rank 1",
+      "buildtime": "3 seconds",
+      "mats": [
+        { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 50 },
+        { "item": "Bullwhips", "frag": "bullwhips", "req": 14 },
+        { "item": "Vibranium", "frag": "currency", "req": 1039 }
+      ],
+      "premium": false
     }
   ],
   "challenges": [
@@ -398,6 +429,13 @@
       "frag": "blackpantherbobble",
       "mats": [
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 80 }
+      ],
+      "premium": false
+    }, {
+      "name": "Crossbones Bobblehead",
+      "frag": "crossbonesbobble",
+      "mats": [
+        { "item": "Field Gear", "frag": "fieldgear", "req": 70 }
       ],
       "premium": false
     }
@@ -500,6 +538,26 @@
       ],
       "premium": false
     }, {
+      "name": "Iron Defender",
+      "frag": "irondefenderlevel7",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Long Range Communicator", "frag": "longrangecommunicator", "req": 2 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 100 },
+        { "item": "Vibranium", "frag": "currency", "req": 11000 }
+      ],
+      "premium": false
+    }, {
+      "name": "Iron Defender Level 8",
+      "frag": "irondefenderlevel8",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Long Range Communicator", "frag": "longrangecommunicator", "req": 25 },
+        { "item": "Field Communicator", "frag": "fieldcommunicator", "req": 200 },
+        { "item": "Vibranium", "frag": "currency", "req": 25000 }
+      ],
+      "premium": false
+    }, {
       "name": "S.H.I.E.L.D. Recruit Level 2",
       "frag": "shieldrecruitlevel2",
       "buildtime": "1 hour",
@@ -545,6 +603,26 @@
         { "item": "Vibranium Daggers", "frag": "vibraniumdaggers", "req": 100 },
         { "item": "Field Gear", "frag": "fieldgear", "req": 50 },
         { "item": "Vibranium", "frag": "currency", "req": 7000 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Operative",
+      "frag": "shieldoperativelevel7",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Battle Gear", "frag": "battlegear", "req": 2 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 100 },
+        { "item": "Vibranium", "frag": "currency", "req": 11000 }
+      ],
+      "premium": false
+    }, {
+      "name": "S.H.I.E.L.D. Operative Level 8",
+      "frag": "shieldoperativelevel8",
+      "buildtime": "4 hours",
+      "mats": [
+        { "item": "Battle Gear", "frag": "battlegear", "req": 25 },
+        { "item": "Field Gear", "frag": "fieldgear", "req": 200 },
+        { "item": "Vibranium", "frag": "currency", "req": 25000 }
       ],
       "premium": false
     }

@@ -1,0 +1,12 @@
+html { font-size: $font-base; }
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: $font-family-base;
+  background-color: $brand-primary-light;
+  color: $brand-primary-color;
+  // -webkit-font-smoothing: antialiased;
+  //         font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+}

@@ -1,12 +1,35 @@
-<div class="settings settings__wrap">
-  <section class="settings__box">
-    <h2>Settings</h2>
-    <div class="input__check">
-      <input class="input__check--box" type="checkbox" name="premiumToggle" id="premiumToggle">
-      <label class="input__check--label" for="premiumToggle">Hide Premium Items</label>
-    </div>
-    <div class="settings__close" id="settingsClose">
-      <span aria-label="close">&times;</span>
-    </div>
-  </section>
-</div>
+<li class="list list--small">
+  <div class="list__segment list__context">
+    <input class="input__box input--check"
+           type="checkbox"
+           id="completeToggle"
+           data-type="toggles"
+           data-target="card--checked" />
+    <label class="input__label input__block" for="completeToggle"></label>
+  </div>
+  <div class="list__desc">Hide Completed</div>
+</li>
+
+<li class="list list--small">
+  <div class="list__segment list__context">
+    <input class="input__box input--check"
+           type="checkbox"
+           id="premiumToggle"
+           data-type="toggles"
+           data-target="card--premium" />
+    <label class="input__label input__block" for="premiumToggle"></label>
+  </div>
+  <div class="list__desc">Hide Premium</div>
+</li>
+
+<li class="list list--small">
+  <div class="list__segment list__context">
+    <input class="input__box input--check"
+           type="checkbox"
+           id="trackedToggle"
+           data-type="toggles"
+           data-target="card--tracked" />
+    <label class="input__label input__block" for="trackedToggle"></label>
+  </div>
+  <div class="list__desc">Only show Tracked Items</div>
+</li>

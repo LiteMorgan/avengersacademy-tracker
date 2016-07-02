@@ -1,0 +1,69 @@
+.input {
+
+  // The input element
+  &__box { display: none; }
+
+  &__label { margin: 0; }
+
+  &__block {
+    position: relative;
+    display: block;
+    width:  $check-height;
+    height: $check-height;
+    border: $border-height
+            solid
+            $brand-event;
+    cursor: pointer;
+    transition: border .05s ease-out;
+    box-sizing: border-box;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top:    0;
+      right:  0;
+      bottom: 0;
+      left:   0;
+      display: block;
+      height: 14px;
+      width:  14px;
+      margin: auto;
+      background-color: $brand-event;
+      opacity: 0;
+      transition: opacity .2s ease-out;
+    }
+
+    &:hover { border-color: $brand-event-secondary; }
+  }
+}
+
+input {
+
+  &[class$='check']:checked {
+    & + label::after { opacity: 1; }
+  }
+
+  &[data-type='checked']:checked {
+    & + label {
+      background-color: $brand-event;
+      color: $brand-event-color;
+
+      &:hover {
+        background-color: $brand-event-dark;
+        color: $brand-event-color;
+      }
+    }
+  }
+
+  &[data-type='track']:checked {
+    & + label {
+      background-color: $brand-event-secondary;
+      color: $brand-event-secondary-color;
+
+      &:hover {
+        background-color: $brand-event-secondary-light;
+        color: $brand-event-secondary-color;
+      }
+    }
+  }
+}

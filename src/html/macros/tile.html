@@ -1,0 +1,43 @@
+{% macro tile(tiledata) %}
+<div class="card col col--4 {%- if tiledata.premium %} card--premium {%- endif -%}" id="{{ tiledata.frag }}">
+  <article class="card__body">
+    <div class="card__cell {%- if tiledata.premium %} card__cell--premium {%- else %} card__cell--item {%- endif %}">
+    </div>
+
+    <div class="card__cell">
+      <p class="h3">{{ tiledata.name }}
+        {% if tiledata.rank %}
+        <small>Rank {{ tiledata.rank }}</small>
+        {% endif %}
+      </p>
+    </div>
+
+    <ul class="card__cell card__cell--list">
+      {% for mat in tiledata.mats %}
+      <li class="list" id="{{ mat.frag }}" data-type="material">
+        {% if loop.length > 1 %}
+        <div class="list__segment list__context">
+          <input class="input__box input--check" type="checkbox" id="{{ tiledata.frag }}-{{ mat.frag }}" data-type="material" />
+          <label class="input__label input__block" for="{{ tiledata.frag }}-{{ mat.frag }}"></label>
+        </div>
+        {% endif %}
+
+        <div class="list__desc">{{ mat.item }}</div>
+        <div class="list__segment list__value">{{ mat.req }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <div class="card__cell card__footer">
+      <div class="col col--2">
+        <input class="input__box" type="checkbox" id="{{ tiledata.frag }}-got" data-type="checked" />
+        <label class="input__label btn btn__bordered btn--wide btn--event" for="{{ tiledata.frag }}-got">Got it</label>
+      </div>
+      <div class="col col--2">
+        <input class="input__box" type="checkbox" id="{{ tiledata.frag }}-track"  data-type="track" />
+        <label class="input__label btn btn__bordered btn--wide btn--event2" for="{{ tiledata.frag }}-track">Track</label>
+      </div>
+    </div>
+  </article>
+</div>
+{% endmacro %}

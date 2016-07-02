@@ -1,0 +1,76 @@
+.btn {
+  $btn: &;
+  padding: 0;
+  font-family: $font-family-nav;
+  font-size: 1em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .1s ease-out,
+              color .1s ease-out,
+              border-color .1s ease-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__bordered {
+    padding: $spacing-xs $spacing-base;
+    background-color: transparent;
+    border: $border-height-sm
+            solid;
+  }
+
+  &__text {
+
+    &:hover,
+    &:focus {
+      color: $brand-event-secondary;
+    }
+  }
+
+  &--wide {
+    display: block;
+    width: 100%;
+    padding: $spacing-xs 0;
+    text-align: center;
+  }
+
+  &--event {
+    color: $brand-event;
+    border-color: $brand-event;
+
+    &:hover {
+      color: $brand-event-dark;
+      border-color: $brand-event-dark;
+    }
+  }
+
+  &--event2 {
+    color: $brand-event-secondary;
+    border-color: $brand-event-secondary;
+
+    &:hover {
+      color: $brand-event-secondary-light;
+      border-color: $brand-event-secondary-light;
+    }
+  }
+
+  &__line {
+    display: block;
+    height: 3px;
+    width: 60%;
+    margin: auto;
+    background-color: $white;
+
+    &:first-child {
+      transform: translateY(-5px);
+    }
+
+    &:last-child {
+      transform: translateY(5px);
+    }
+  }
+}

@@ -1,4 +1,301 @@
 {
-  "title": "Avengers Academy Event Tracker - Civil War",
-  "version": "0.3.4"
+  "site": {
+    "title": "Avengers Academy Event Tracker - Civil War",
+    "event": "Spider-Man, Act 1",
+    "version": "1.0.1"
+  },
+  "characters": [
+    {
+      "name": "Spider-Man",
+      "frag": "spi1",
+      "rank": 1,
+      "premium": false,
+      "mats": [
+        { "item": "Spider-Tracers", "frag": "spidertracers", "req": 18 },
+        { "item": "Film Rolls", "frag": "filmrolls", "req": 25 },
+        { "item": "Web Cartridges", "frag": "webcartridges", "req": 25 },
+        { "item": "Oscoins", "frag": "currency", "req": 2099 }
+      ]
+    },
+    {
+      "name": "Spider-Man",
+      "frag": "spi2",
+      "rank": 2,
+      "premium": false,
+      "mats": [
+        { "item": "Spider Tech", "frag": "spidertech", "req": 10 },
+        { "item": "Exclusives", "frag": "exclusives", "req": 3 },
+        { "item": "Oscoins", "frag": "currency", "req": 1801 }
+      ]
+    },
+    {
+      "name": "Spider-Man",
+      "frag": "spi3",
+      "rank": 3,
+      "premium": false,
+      "mats": [
+        { "item": "Exclusives", "frag": "exclusives", "req": 8 },
+        { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 1 },
+        { "item": "Oscoins", "frag": "currency", "req": 2702 }
+      ]
+    },
+    {
+      "name": "Spider-Man",
+      "frag": "spi4",
+      "rank": 4,
+      "premium": false,
+      "mats": [
+        { "item": "Spider Tech", "frag": "spidertech", "req": 15 },
+        { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 5 },
+        { "item": "Oscoins", "frag": "currency", "req": 4053 }
+      ]
+    },
+    {
+      "name": "Spider-Man",
+      "frag": "spi5",
+      "rank": 5,
+      "premium": false,
+      "mats": [
+        { "item": "Exclusives", "frag": "exclusives", "req": 20 },
+        { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 25 },
+        { "item": "Oscoins", "frag": "currency", "req": 6080 }
+      ]
+    },
+    {
+      "name": "Spider-Ham",
+      "frag": "sph1",
+      "rank": 1,
+      "premium": true,
+      "mats": [
+        { "item": "Shards", "frag": "shards", "req": 495 }
+      ]
+    },
+    {
+      "name": "Spider-Ham",
+      "frag": "sph2",
+      "rank": 2,
+      "premium": true,
+      "mats": [
+        { "item": "Ham-Tracers", "frag": "hamtracers", "req": 14 },
+        { "item": "Earth-8311 Brochures", "frag": "earth8311", "req": 14 },
+        { "item": "Oscoins", "frag": "currency", "req": 1698 }
+      ]
+    },
+    {
+      "name": "Spider-Ham",
+      "frag": "sph3",
+      "rank": 3,
+      "premium": true,
+      "mats": [
+        { "item": "Vegetarian Hoagies", "frag": "hoagie", "req": 12 },
+        { "item": "Ham-Cams", "frag": "hamcam", "req": 20 },
+        { "item": "Oscoins", "frag": "currency", "req": 1812 }
+      ]
+    },
+    {
+      "name": "Spider-Ham",
+      "frag": "sph4",
+      "rank": 4,
+      "premium": true,
+      "mats": [
+        { "item": "Ham-Tracers", "frag": "hamtracers", "req": 28 },
+        { "item": "Earth-8311 Brochures", "frag": "earth8311", "req": 26 },
+        { "item": "Oscoins", "frag": "currency", "req": 2291 }
+      ]
+    },
+    {
+      "name": "Spider-Ham",
+      "frag": "sph5",
+      "rank": 5,
+      "premium": true,
+      "mats": [
+        { "item": "Vegetarian Hoagie", "frag": "hoagie", "req": 24 },
+        { "item": "Ham-Cams", "frag": "hamcam", "req": 34 },
+        { "item": "Oscoins", "frag": "currency", "req": 2510 }
+      ]
+    },
+    {
+      "name": "Black Cat",
+      "frag": "cat1",
+      "rank": 1,
+      "premium": false,
+      "mats": [
+        { "item": "Black Cat Tokens", "frag": "cattokens", "req": 10 },
+        { "item": "Lock Picks", "frag": "lockpicks", "req": 35 },
+        { "item": "Black Belts", "frag": "blackbelts", "req": 30 },
+        { "item": "Oscoins", "frag": "currency", "req": 4998 }
+      ]
+    },
+    {
+      "name": "Black Cat",
+      "frag": "cat2",
+      "rank": 2,
+      "premium": false,
+      "mats": [
+        { "item": "Exclusives", "frag": "exclusives", "req": 6 },
+        { "item": "Oscoins", "frag": "currency", "req": 2499 }
+      ]
+    },
+    {
+      "name": "Black Cat",
+      "frag": "cat3",
+      "rank": 3,
+      "premium": false,
+      "mats": [
+        { "item": "Exclusives", "frag": "exclusives", "req": 10 },
+        { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 2 },
+        { "item": "Oscoins", "frag": "currency", "req": 3749 }
+      ]
+    }
+  ],
+  "costumes": [
+    {
+      "name": "Reporter Wasp",
+      "frag": "waspcostume1",
+      "premium": false,
+      "mats": [
+        { "item": "Cappuccinos", "frag": "cappucinos", "req": 35 },
+        { "item": "Undercover Sunglasses", "frag": "undercoversunglasses", "req": 35 },
+        { "item": "Film Rolls", "frag": "filmrolls", "req": 12 },
+        { "item": "Notepads", "frag": "notepads", "req": 3 },
+        { "item": "Oscoins", "frag": "currency", "req": 2242 }
+      ]
+    },
+    {
+      "name": "WWII Cap",
+      "frag": "wwiicap",
+      "premium": false,
+      "mats": [
+        { "item": "Defeat Lizard, Round 7" }
+      ]
+    }
+  ],
+  "buildings": [
+    {
+      "name": "Daily Bugle",
+      "frag": "ebuidling1",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 100 }
+      ]
+    },
+    {
+      "name": "Photo Lab",
+      "frag": "ebuidling2",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 350 }
+      ]
+    },
+    {
+      "name": "Spider-Man's Workshop",
+      "frag": "ebuidling3",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 500 }
+      ]
+    },
+    {
+      "name": "Power Plant",
+      "frag": "ebuidling4",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 700 }
+      ]
+    },
+    {
+      "name": "Power Plant Station 3",
+      "frag": "pplant3",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 1400 }
+      ]
+    },
+    {
+      "name": "Power Plant Station 4",
+      "frag": "pplant4",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 2100 }
+      ]
+    },
+    {
+      "name": "Sky-Cycle Lot",
+      "frag": "ebuidling5",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 100 }
+      ]
+    },
+    {
+      "name": "Research Center",
+      "frag": "ebuidling6",
+      "premium": false,
+      "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 700 }
+      ]
+    }
+  ],
+  "prizes": [
+    {
+      "name": "Wrestling Poster",
+      "frag": "reward1",
+      "premium": false,
+      "mats": [
+      ]
+    },
+    {
+      "name": "Hot Dog Stand",
+      "frag": "reward2",
+      "premium": false,
+      "mats": [
+      ]
+    },
+    {
+      "name": "New York Newsstand",
+      "frag": "reward3",
+      "premium": false,
+      "mats": [
+      ]
+    },
+    {
+      "name": "Statue of Liberty Replica",
+      "frag": "reward4",
+      "premium": false,
+      "mats": [
+      ]
+    },
+    {
+      "name": "Radioactive Spider",
+      "frag": "reward5",
+      "premium": false,
+      "mats": [
+        { "item": "Yellow Gems", "frag": "yellowgem", "req": 2 },
+        { "item": "Oscoins", "frag": "currency", "req": 3529 }
+      ]
+    },
+    {
+      "name": "Black Cat's Loot",
+      "frag": "reward6",
+      "premium": false,
+      "mats": [
+        { "item": "Yellow Gems", "frag": "yellowgem", "req": 5 },
+        { "item": "Oscoins", "frag": "currency", "req": 7058 }
+      ]
+    },
+    {
+      "name": "Spider-Mobile",
+      "frag": "reward7",
+      "premium": false,
+      "mats": [
+      ]
+    },
+    {
+      "name": "Black Cat's Cat",
+      "frag": "reward8",
+      "premium": false,
+      "mats": [
+      ]
+    }
+  ]
 }

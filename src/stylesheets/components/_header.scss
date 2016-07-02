@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  height: 12rem;
+  margin-bottom: $spacing-sm;
+  background: url('/images/landscape.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &__gradient {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .75;
+    @include gradient-directional($brand-event,
+                                  $brand-event-secondary,
+                                  140deg);
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      height: 114px;
+    }
+  }
+
+  &__logos {
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+}

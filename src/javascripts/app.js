@@ -1,318 +1,288 @@
 const underscore = require('underscore');
 global._ = underscore
 
-// getJSON Function
-function get(url) {
-  // Return a new promise.
-  return new Promise(function(resolve, reject) {
-    // Do the usual XHR stuff
-    var req = new XMLHttpRequest();
-    req.open('GET', url);
+import 'vendor/jquery.animateNumber.min.js';
 
-    req.onload = function() {
-      // This is called even on 404 etc
-      // so check the status
-      if (req.status == 200) {
-        // Resolve the promise with the response text
-        resolve(req.response);
-      }
-      else {
-        // Otherwise reject with the status text
-        // which will hopefully be a meaningful error
-        reject(Error(req.statusText));
-      }
+var storageObj = {},
+    filters = [];
+
+/* localStorage
+ * -----------------------------
+ * localStorage load tasks
+ */
+if (!localStorage['aaSpidey']) {
+  localStorage['aaSpidey'] = JSON.stringify({});
+} else {
+  var stored = JSON.parse(localStorage.aaSpidey),
+      storedLength = Object.keys(stored).length;
+
+  for (var i = 0; i < storedLength; i++) {
+    var key = Object.keys(stored)[i],
+        card = $('.card[id="' + key + '"]'),
+        itemCheck = card.find('input[data-type="checked"]'),
+        itemTrack = card.find('input[data-type="track"]'),
+        matCheck = card.find('.list');
+
+    // If the Key is marked as checked...
+    if(stored[key].checked){
+      itemCheck.prop('checked', true);
+      card.addClass('card--checked');
     };
-
-    // Handle network errors
-    req.onerror = function() {
-      reject(Error("Network Error"));
+    if(stored[key].tracked){
+      itemTrack.prop('checked', true);
+      card.addClass('card--tracked');
     };
+    if(stored[key].mats){
+      _.each(stored[key].mats, function(value, index){
 
-    // Make the request
-    req.send();
-  });
-}
+        var cardMaterial = card.find('.list:eq(' + index + ')'),
+            cardMaterialBox = cardMaterial.find('.input__box');
 
-function getJSON(url) {
-  return get(url).then(JSON.parse);
-}
-
-getJSON('/global.json').then(function(data){
-  // get JSON data
-  return data;
-}).catch(function(error){
-  $('.error').show();
-}).then(function(data){
-  // Take JSON data.characters and build Character Tracker
-  $.each($(data), function(i, data){
-    $.each($(data.characters), function(i, char){
-      trackerBuild(char, characterTracker);
-    });
-    // Take JSON data.costumes and build Costumes Tracker
-    $.each($(data.costumes), function(i, cost){
-      trackerBuild(cost, costumeTracker);
-    });
-    // Take JSON data.buildings and build Buildings Tracker
-    $.each($(data.buildings), function(i, build){
-      trackerBuild(build, buildingTracker);
-    });
-    // Take JSON data.challenges and build Buildings Tracker
-    $.each($(data.challenges), function(i, chal){
-      trackerBuild(chal, challengeTracker);
-    });
-    // Take JSON data.special and build Special Tracker
-    $.each($(data.special), function(i, spec){
-      trackerBuild(spec, specialTracker);
-    });
-  });
-  return data;
-}).then(function(data){
-  // Function to take all items
-  // Add to an array
-  // Sort
-  // And then return combined totals
-  itemCards(data, function(){
-    itemTotals();
-  });
-}).then(function(){
-  if (!localStorage['aaCivilWar']) {
-    localStorage['aaCivilWar'] = JSON.stringify({});
-  } else {
-    var stored = JSON.parse(localStorage.aaCivilWar),
-        storedLength = Object.keys(stored).length;
-
-    for (var i = 0; i < storedLength; i++) {
-      var key = Object.keys(stored)[i];
-      if(stored[key].status){
-        var check = $('#trackerApp').find('#' + key);
-        check.prop('checked', true);
-      }
-    }
+        if(stored[key].mats[index] === true) {
+          cardMaterialBox.prop('checked', true);
+        }
+      });
+    };
   }
-
-  if (!localStorage['aaSettings']) {
-    localStorage['aaSettings'] = JSON.stringify({});
-  } else {
-    var stored = JSON.parse(localStorage.aaSettings);
-    if($.isEmptyObject(stored)) {
-      return;
-    } else if(stored['premiumContentHide'].status) {
-      $('input#premiumToggle').prop('checked', true);
-      $('.table--premium').toggleClass('table--hidden');
-    }
-  }
-}).then(function(){
-  finishedItems();
-  itemTotals();
-  zeroItems();
-  settingsMenu();
-  premiumToggle();
-});
-
-// Build Tracker
-function trackerBuild(data, location){
-  $(location).append(trackerHTML(data.name, data.frag, data.mats, data.premium));
-};
-
-function trackerHTML(name, frag, items, premium){
-  var i = 0,
-      line,
-      isPremium = '',
-      itemArray = [],
-      itemList = $.each($(items), function(i, mats){
-                   itemArray += '<li><span class="item__req" data-item="' +
-                                mats.frag +
-                                '">' +
-                                mats.req +
-                                '</span>' +
-                                mats.item +
-                                '</li>';
-                 });
-
-  if(premium === true){ isPremium = ' table--premium'; } 
-
-  line = '<section class="table__row' + isPremium + '">' +
-         '<div class="table__col table__col--xs input__check">' +
-         '<input class="input__check--box" type="checkbox" ' +
-         'name="' + frag + 'Got" id="' + frag + '" />' +
-         '<label class="input__check--label" for="' + frag + '"></label>' +
-         '</div>' +
-         '<div class="table__col table__col--md">' +
-         name +
-         '</div>' +
-         '<div class="table__col table__col--lg" id="itemList">' +
-         '<ul>' +
-         itemArray +
-         '</ul>' +
-         '</div>' +
-         '</section>';
-
-  return line;
-};
-
-function itemCards(data, callback){
-  var allItems = new Array();
-
-  $.each($(data.characters), function(i, info){
-    $.each($(info.mats), function(j, mats){
-      allItems.push({"frag": mats.frag, "name": mats.item});
-    });
-  });
-  $.each($(data.costumes), function(i, info){
-    $.each($(info.mats), function(j, mats){
-      allItems.push({"frag": mats.frag, "name": mats.item});
-    });
-  });
-  $.each($(data.buildings), function(i, info){
-    $.each($(info.mats), function(j, mats){
-      allItems.push({"frag": mats.frag, "name": mats.item});
-    });
-  });
-  $.each($(data.challenges), function(i, info){
-    $.each($(info.mats), function(j, mats){
-      allItems.push({"frag": mats.frag, "name": mats.item});
-    });
-  });
-  $.each($(data.special), function(i, info){
-    $.each($(info.mats), function(j, mats){
-      allItems.push({"frag": mats.frag, "name": mats.item});
-    });
-  });
-  allItems = $.makeArray(allItems);
-  allItems = _.uniq(allItems, function(item, key, frag){
-               return item.frag;
-             });
-
-  $.each($(allItems), function(i, item){
-    var itemHTML = '<div class="event__item" data-frag="' +
-                    item.frag +
-                    '">' +
-                    '<div class="event__item--total"></div>' +
-                    item.name +
-                    '</div>';
-
-    $('#eventItems').append(itemHTML);
-  });
-
-  callback();
-};
-
-function itemTotals(){
-  $.each($('.event__item'), function(){
-    var ele = $(this),
-        frag = ele.data('frag'),
-        rows = $('#trackerApp').find('.table__row'),
-        sum = 0;
-
-    rows.each(function(){
-      
-      var ele = $(this),
-          rowComplete = ele.hasClass('table__row--completed'),
-          mats = ele.find('.item__req[data-item="' + frag + '"]');
-
-      if( rowComplete || ele.hasClass('table--hidden') ){
-
-      } else {
-        sum += Number( mats.text() );
-      }
-    });
-    
-    var finalVal = sum.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-
-    ele.children('.event__item--total').html(finalVal);
-  })
 }
 
-function zeroItems(){
-  $.each($('.event__item'), function(){
-    var ele = $(this);
-
-    if(Number(ele.find('.event__item--total').text()) === 0) {
-      ele.addClass('event__item--zero');
-    } else {
-      ele.removeClass('event__item--zero');
-    }
+if (localStorage['aaCivilWar'] || localStorage['aaSettings']) {
+  var civilWarHTML = '<div class="content">' +
+                       '<section class="row">' +
+                         '<h2 class="text--center">Welcome back!</h2>' +
+                         '<p>Thanks for taking part in the Event Tracker Alpha during the Civil War event. There\'s a little bit of data left over from that that you will no longer need. Just click the button below, and that will all be cleared up for you!</p>' +
+                         '<p>Good luck with the Spider-Man event, and thanks for coming back!</p>'+
+                         '<p><em>- getignited</em></p>' +
+                         '<button class="btn btn__bordered btn--wide btn--event" id="cleanUp">Clean up</button>'+
+                       '</section>' +
+                     '</div>';
+  $(civilWarHTML).insertBefore('main');
+  $('#cleanUp').on('click', function(){
+    localStorage.removeItem('aaSettings');
+    localStorage.removeItem('aaCivilWar');
+    location.reload();
   });
-};
 
-function finishedItems(){
-  $.each($('.table__row'), function(){
+}
+
+
+/* cards
+ * -----------------------------
+ * Watch Card objects for any changes to checkboxes
+ */
+function cards(){
+  $.each($('.card'), function(){
     var ele = $(this),
-        check = ele.find('.input__check--box'),
-        checkID = check.attr('ID'),
-        itemGot = false;
+        itemID = ele.attr('id'),
+        checkedButton = ele.find('input'),
+        mat = ele.find('.list'),
+        matIndex = mat.length;
 
-    if (ele.find('.input__check--box:checked').length){
-      ele.addClass('table__row--completed');
-    }
+    checkedButton.on('change', function(){
 
-    check.on('click', function(){
-      ele.toggleClass('table__row--completed');
-      itemTotals();
-      zeroItems();
+      var tickboxData = $(this).data('type'),
+          itemStatus,
+          itemTrack;
 
-      if(ele.hasClass('table__row--completed')){
-        itemGot = true;
-      } else {
-        itemGot = false;
+      // Check if Card is marked as Checked
+      if(tickboxData === 'checked'){
+        itemStatus = $(this).prop('checked');
+
+        if(itemStatus){
+          ele.addClass('card--checked');
+        } else {
+          ele.removeClass('card--checked');
+        }
       }
-      storageUpd(checkID, itemGot);
+      // Check if Card is marked as Tracked
+      if(tickboxData === 'track'){
+        itemTrack = $(this).prop('checked');
+
+        if(itemTrack){
+          ele.addClass('card--tracked');
+        } else {
+          ele.removeClass('card--tracked');
+        }
+      }
+      // Check which of the two toggles are active to pass to localStorage
+      itemStatus = ele.find('input[data-type="checked"]').prop('checked');
+      itemTrack = ele.find('input[data-type="track"]').prop('checked');
+
+      storageObj = JSON.parse(localStorage.getItem('aaSpidey'));
+      storageObj[itemID] = _.defaults({
+        checked: false,
+        tracked: false,
+        mats: []
+      });
+      storageObj[itemID].checked = itemStatus;
+      storageObj[itemID].tracked = itemTrack;
+      if(matIndex > 1) {
+        _.forEach(mat, function(material, materialIndex){
+          var materialCheck = $(material).find('.input__box').prop('checked');
+          storageObj[itemID].mats[materialIndex] = materialCheck;
+        });
+      }
+      localStorage.setItem('aaSpidey', JSON.stringify(storageObj));
+      filterSelection();
+      materialCount();
     })
   });
-}
+};
 
 
-function storageUpd(itemID, got){
-  var storageObj = {};
 
-  storageObj = JSON.parse(localStorage.getItem('aaCivilWar'));
-  storageObj[itemID] = {
-    status: got
-  }
-  localStorage.setItem('aaCivilWar', JSON.stringify(storageObj));
-}
+function materialList() {
+  var allMaterials = new Array();
 
+  $.each($('.list[data-type="material"]'), function(i, info) {
+    var ele = $(this),
+        materialID = ele.attr('id'),
+        materialName = ele.children('.list__desc').html(),
+        materialAmount = ele.children('.list__value').html();
 
-function premiumToggle(){
-  var premiumInput = $('input#premiumToggle');
+    if(materialAmount > 0){
+      allMaterials.push({
+        "name": materialName,
+        "frag": materialID
+      });
+    };
+  });
+  allMaterials = $.makeArray(allMaterials);
+  allMaterials = _.uniq(allMaterials, function(item, key, frag){
+                   return item.frag;
+                 });
+  allMaterials = _.sortBy(allMaterials, 'name');
 
-  premiumInput.on('click', function(){
-    $('.table--premium').toggleClass('table--hidden');
-    itemTotals();
-    zeroItems();
+  $.each($(allMaterials), function(i, item){
+    var materialHTML;
 
-    if (premiumInput.prop('checked') === true){
-      var storageObj = {};
+    materialHTML = '<li class="list list--small" id="' + item.frag + '" data-type="itemTotals">' +
+                   '<div class="list__segment list__context text--center">' +
+                   '<img class="img img__icon" src="/images/16-spidey/' + item.frag + '@4x.png" alt="' + item.name + '">' +
+                   '</div>' +
+                   '<div class="list__desc">' + item.name + '</div>' +
+                   '<div class="list__segment list__value">0</div>' +
+                   '</li>';
+    $('#materialList').append(materialHTML);
+  });
+};
 
-      storageObj = JSON.parse(localStorage.getItem('aaSettings'));
-      storageObj['premiumContentHide'] = {
-        status: true
+function materialCount(){
+  var listedMaterial = $('.list[data-type="itemTotals"]');
+  $.each(listedMaterial, function(){
+    var ele = $(this),
+        materialFrag = ele.attr('id'),
+        card = $('.card'),
+        sum = 0,
+        totalValue;
+
+    card.each(function(){
+      var ele = $(this),
+          cardMaterial = ele.find('.list[id="' + materialFrag + '"]'),
+          materialRequired = cardMaterial.children('.list__value').text(),
+          cardCompleted = ele.hasClass('card--checked'),
+          cardHidden = ele.hasClass('card--hidden'),
+          cardMaterialChecked = cardMaterial.find('input').prop('checked');
+
+      if(cardCompleted || cardHidden || cardMaterialChecked) {
+
+      } else {
+        sum += Number( materialRequired );
       }
-      localStorage.setItem('aaSettings', JSON.stringify(storageObj));
+    });
+
+    ele.children('.list__value').animateNumber({
+      number: sum,
+      numberStep: $.animateNumber.numberStepFactories.separator(',')
+    });
+  });
+}
+
+// settings
+// ----------------------
+function settings(){
+  // Premium Items toggle
+  $('#premiumToggle').on('click', function(){
+    $.each($('.card'), function(){
+      var ele = $(this);
+      premiumToggle(ele);
+    });
+  });
+  // Complete Items toggle
+  $('#completeToggle').on('click', function(){
+
+    $.each($('.card'), function(){
+      var ele = $(this);
+      completeToggle(ele);
+    });
+  });
+}
+
+
+function filterSelection(){
+
+  // Check what the filter critera are and add to an array
+  $.each($('input[data-type="toggles"]'), function(){
+    var ele = $(this);
+
+    if(ele.prop('checked')){
+      filters.push(ele.data('target'));
     } else {
-      var storageObj = {};
+      filters = $.grep(filters, function(value){
+        return value != ele.data('target');
+      });
+    }
+    cardSettings(filters);
+  });
+}
 
-      storageObj = JSON.parse(localStorage.getItem('aaSettings'));
-      storageObj['premiumContentHide'] = {
-        status: false
+$('input[data-type="toggles"]').on('change', function(){
+  filterSelection();
+  materialCount();
+});
+
+
+function cardSettings(filters){
+  // for each item in the Filters array, check to see
+  // if the card matches that items criteria.
+  // If the card matches one or all critera, hide the card.
+  // If the card is tracked, display it regardless
+  $.each($('.card'), function(){
+    var ele = $(this),
+        j = 0,
+        k = 0;
+
+    $.each($(filters), function(key, value){
+
+      if(value === 'card--tracked'){
+        if(ele.hasClass(value)){
+          ele.addClass('card--trackedon');
+        } else {
+          k++;
+        }
       }
-      localStorage.setItem('aaSettings', JSON.stringify(storageObj));
+
+      if(ele.hasClass(value) && value !== 'card--tracked'){
+        ele.removeClass('card--trackedon');
+        j++;
+      }
+    });
+
+    if(k > 0){
+      ele.hide(200);
+      ele.addClass('card--hidden');
+    } else {
+      if(j > 0){
+        ele.hide(200);
+        ele.addClass('card--hidden');
+      } else {
+        ele.show(200);
+        ele.removeClass('card--hidden');
+      }
     }
   });
-};
+}
 
-function settingsMenu(){
-  var btn = $('#settingsToggle'),
-      close = $('#settingsClose');
-
-  btn.on('click', function(){
-    $('.settings').fadeIn();
-  });
-
-  close.on('click', function(){
-    $('.settings').fadeOut();
-  })
-};
 
 
 
@@ -331,12 +301,37 @@ $(function() {
     }
   });
 
-  // Mobile menu toggle function
-  $('#menuToggle').on('click', function(){
-    $('.nav').toggleClass('nav--active');
+  $('#navMenu').on('click', function(){
+    $('.content').toggleClass('content--navopen');
+    $(this).toggleClass('nav__button--open');
+    $('.sidebar').toggleClass('sidebar--navopen');
+  });
+
+  $("img").error(function(){
+    $(this).addClass('img--error');
+  });
+
+  $('button').on('click', function(){
+    $(this).blur();
+  });
+
+  $('.nav__toggle').on('click', function(){
+    var ele = $(this),
+        drawerHeight = ele.next().get(0).scrollHeight;
+
+    ele.toggleClass('nav__toggle--open');
+    if(ele.hasClass('nav__toggle--open')){
+      ele.next().animate({height: drawerHeight}, 200, function(){
+        $(this).height('auto');
+      });
+    } else {
+      ele.next().animate({height: 0}, 200);
+    }
   })
 });
 
+cards();
+materialList();
+materialCount();
 
-
-import '../../node_modules/bootstrap/dist/js/umd/scrollspy.js'
+import '../../node_modules/bootstrap/dist/js/umd/scrollspy.js';

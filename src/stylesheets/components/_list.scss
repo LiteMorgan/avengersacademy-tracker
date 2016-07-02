@@ -1,0 +1,74 @@
+// Overriding the UL/LI styles
+ul {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ul {
+  margin-bottom: $spacing-base;
+  padding: 0 $spacing-base;
+  list-style: initial;
+
+  &__point {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+.list {
+  $list: &;
+  display: flex;
+  padding-top:    $spacing-xs;
+  padding-bottom: $spacing-xs;
+  border-bottom:  $border-height
+                  solid
+                  darken($brand-primary-light, 8%);
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &:last-child { border-bottom: none; }
+
+  $list-width-sm: 20%;
+  $list-width-md: 32%;
+  $list-width-lg: 100 - ($list-width-sm + $list-width-md);
+
+  &__segment {
+    flex-grow: 1;
+  }
+
+  // Used for icons and checkmarks
+  &__context {
+    padding-left: $spacing-xs;
+    flex-basis: $list-width-sm;
+    max-width: 50px;
+  }
+
+  // Used for names of listed items
+  &__desc {
+    flex-grow: 2.5;
+    flex-basis: $list-width-lg;
+  }
+
+  // Used for the values of items
+  &__value {
+    padding-right: $spacing-xs;
+    font-weight: $font-weight-heavy;
+    text-align: right;
+    flex-grow: 1.5;
+    flex-basis: $list-width-md;
+  }
+
+  &--small {
+    font-size: .85em;
+    order: 3;
+  }
+
+  &[id="currency"] { order: 1; }
+  &[id="shards"] { order: 2; }
+}
