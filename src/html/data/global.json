@@ -2,7 +2,7 @@
   "site": {
     "title": "Avengers Academy Event Tracker - Civil War",
     "event": "Spider-Man, Act 1",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "characters": [
     {
@@ -146,6 +146,28 @@
         { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 2 },
         { "item": "Oscoins", "frag": "currency", "req": 3749 }
       ]
+    },
+    {
+      "name": "Black Cat",
+      "frag": "cat4",
+      "rank": 4,
+      "premium": false,
+      "mats": [
+        { "item": "Exclusives", "frag": "exclusives", "req": 15 },
+        { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 10 },
+        { "item": "Oscoins", "frag": "currency", "req": 5624 }
+      ]
+    },
+    {
+      "name": "Black Cat",
+      "frag": "cat5",
+      "rank": 5,
+      "premium": false,
+      "mats": [
+        { "item": "Exclusives", "frag": "exclusives", "req": 20 },
+        { "item": "Spider-Man Tokens", "frag": "spideytoken", "req": 50 },
+        { "item": "Oscoins", "frag": "currency", "req": 5624 }
+      ]
     }
   ],
   "costumes": [
@@ -270,7 +292,7 @@
       "frag": "reward5",
       "premium": false,
       "mats": [
-        { "item": "Yellow Gems", "frag": "yellowgem", "req": 2 },
+        { "item": "Precious Jewels", "frag": "preciousjewel", "req": 2 },
         { "item": "Oscoins", "frag": "currency", "req": 3529 }
       ]
     },
@@ -279,7 +301,7 @@
       "frag": "reward6",
       "premium": false,
       "mats": [
-        { "item": "Yellow Gems", "frag": "yellowgem", "req": 5 },
+        { "item": "Precious Jewels", "frag": "preciousjewel", "req": 5 },
         { "item": "Oscoins", "frag": "currency", "req": 7058 }
       ]
     },
@@ -288,6 +310,7 @@
       "frag": "reward7",
       "premium": false,
       "mats": [
+        { "item": "Oscoins", "frag": "currency", "req": 10588 }
       ]
     },
     {
@@ -295,6 +318,8 @@
       "frag": "reward8",
       "premium": false,
       "mats": [
+        { "item": "Precious Jewels", "frag": "preciousjewel", "req": 10 },
+        { "item": "Oscoins", "frag": "currency", "req": 14117 }
       ]
     }
   ]
